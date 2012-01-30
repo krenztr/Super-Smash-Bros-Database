@@ -1,0 +1,9 @@
+c:\users\rcz\documents\visual studio 2010\Projects\CSSE333\SuperSmashBros\SuperSmashBros\bin\Debug\SuperSmashBros.exe
+c:\users\rcz\documents\visual studio 2010\Projects\CSSE333\SuperSmashBros\SuperSmashBros\bin\Debug\SuperSmashBros.pdb
+c:\users\rcz\documents\visual studio 2010\Projects\CSSE333\SuperSmashBros\SuperSmashBros\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\rcz\documents\visual studio 2010\Projects\CSSE333\SuperSmashBros\SuperSmashBros\obj\x86\Debug\SuperSmashBros.Properties.Resources.resources
+c:\users\rcz\documents\visual studio 2010\Projects\CSSE333\SuperSmashBros\SuperSmashBros\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\rcz\documents\visual studio 2010\Projects\CSSE333\SuperSmashBros\SuperSmashBros\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\rcz\documents\visual studio 2010\Projects\CSSE333\SuperSmashBros\SuperSmashBros\obj\x86\Debug\SuperSmashBros.exe
+c:\users\rcz\documents\visual studio 2010\Projects\CSSE333\SuperSmashBros\SuperSmashBros\obj\x86\Debug\SuperSmashBros.pdb
+c:\users\rcz\documents\visual studio 2010\Projects\CSSE333\SuperSmashBros\SuperSmashBros\obj\x86\Debug\SuperSmashBros.SSBLoginPage.resources
