@@ -12,12 +12,11 @@ namespace SuperSmashBros
 {
     public partial class SSBLoginPage : Form
     {
-        readonly string pwd = "";
+        readonly string pwd = "supersmashbros";
         public SSBLoginPage()
         {
             InitializeComponent();
             usernameBox.KeyPress += new KeyPressEventHandler(usernameBox_KeyPress);
-
             passwordBox.KeyDown += new KeyEventHandler(passwordBox_KeyDown);
             passwordBox.UseSystemPasswordChar = true;
         }
@@ -35,7 +34,7 @@ namespace SuperSmashBros
             string username = usernameBox.Text;
             string password = passwordBox.Text;
 
-            string connectionString = "user id=zhangr1;" +
+            string connectionString = "user id=CSSE333-201212-SuperSmashBros;" +
                                        "Password="+pwd+";" +
                                        "server=whale.cs.rose-hulman.edu;" +
                                        "Trusted_Connection=no;" +

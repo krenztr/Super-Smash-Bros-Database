@@ -67,6 +67,13 @@ namespace SuperSmashBros.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap challenger_approaching {
+            get {
+                object obj = ResourceManager.GetObject("challenger-approaching", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap enter_button {
             get {
                 object obj = ResourceManager.GetObject("enter-button", resourceCulture);
