@@ -73,6 +73,10 @@ namespace SuperSmashBros
         private void registerButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Register Button Clicked");
+
+            this.Hide();
+            RegistrationPage register_form = new RegistrationPage();
+            register_form.ShowDialog();
         }
         #endregion
 

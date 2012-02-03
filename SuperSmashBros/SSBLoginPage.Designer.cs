@@ -93,6 +93,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,7 +131,7 @@
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.enterButton);
             this.Controls.Add(this.backgroundPicture);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SSBLoginPage";
             this.Text = "SuperSmashBrosDB - Login";
             ((System.ComponentModel.ISupportInitialize)(this.backgroundPicture)).EndInit();

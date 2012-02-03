@@ -30,5 +30,13 @@ namespace SuperSmashBros
         {
 
         }
+
+        private void register_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            SSBLoginPage login_form = new SSBLoginPage();
+            login_form.ShowDialog();
+        }
     }
 }

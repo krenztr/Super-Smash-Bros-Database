@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.username_textbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.password_textbox = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.password_texbox2 = new System.Windows.Forms.MaskedTextBox();
+            this.register_button = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // username_textbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(323, 109);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.username_textbox.Location = new System.Drawing.Point(323, 109);
+            this.username_textbox.Name = "username_textbox";
+            this.username_textbox.Size = new System.Drawing.Size(100, 20);
+            this.username_textbox.TabIndex = 0;
+            this.username_textbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -58,12 +58,12 @@
             this.label1.Text = "username";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // maskedTextBox1
+            // password_textbox
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(323, 135);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 2;
+            this.password_textbox.Location = new System.Drawing.Point(323, 135);
+            this.password_textbox.Name = "password_textbox";
+            this.password_textbox.Size = new System.Drawing.Size(100, 20);
+            this.password_textbox.TabIndex = 2;
             // 
             // label2
             // 
@@ -83,21 +83,22 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "reenter password";
             // 
-            // maskedTextBox2
+            // password_texbox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(323, 161);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox2.TabIndex = 4;
+            this.password_texbox2.Location = new System.Drawing.Point(323, 161);
+            this.password_texbox2.Name = "password_texbox2";
+            this.password_texbox2.Size = new System.Drawing.Size(100, 20);
+            this.password_texbox2.TabIndex = 4;
             // 
-            // button1
+            // register_button
             // 
-            this.button1.Location = new System.Drawing.Point(323, 187);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 47);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Register!";
-            this.button1.UseVisualStyleBackColor = true;
+            this.register_button.Location = new System.Drawing.Point(323, 187);
+            this.register_button.Name = "register_button";
+            this.register_button.Size = new System.Drawing.Size(100, 47);
+            this.register_button.TabIndex = 6;
+            this.register_button.Text = "Register!";
+            this.register_button.UseVisualStyleBackColor = true;
+            this.register_button.Click += new System.EventHandler(this.register_button_Click);
             // 
             // pictureBox1
             // 
@@ -118,13 +119,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(476, 303);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.register_button);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.password_texbox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.password_textbox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.username_textbox);
             this.Controls.Add(this.pictureBox1);
             this.Name = "RegistrationPage";
             this.Text = "RegistrationPage";
@@ -136,13 +137,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox username_textbox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox password_textbox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MaskedTextBox password_texbox2;
+        private System.Windows.Forms.Button register_button;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
