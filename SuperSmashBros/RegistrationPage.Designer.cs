@@ -130,6 +130,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.usernameBox);
             this.Controls.Add(this.pictureBox1);
+            this.MaximumSize = new System.Drawing.Size(492, 341);
+            this.MinimumSize = new System.Drawing.Size(492, 341);
             this.Name = "RegistrationPage";
             this.Text = "RegistrationPage";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
