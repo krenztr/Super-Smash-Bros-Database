@@ -73,6 +73,7 @@ namespace SuperSmashBros
                     sdr.Close();
                     return;
                 }
+
                 else
                 {
                     commandString = "INSERT INTO PLAYER " +
@@ -95,6 +96,7 @@ namespace SuperSmashBros
                         MessageBox.Show("You have been successfully registered!");
                         sdr.Close();
                     }
+
                     else
                     {
                         MessageBox.Show("Failure to register!");
