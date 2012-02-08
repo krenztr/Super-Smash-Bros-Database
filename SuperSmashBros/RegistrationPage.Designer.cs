@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.username_textbox = new System.Windows.Forms.TextBox();
+            this.usernameBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.password_textbox = new System.Windows.Forms.MaskedTextBox();
+            this.passwordBox = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.password_texbox2 = new System.Windows.Forms.MaskedTextBox();
+            this.passwordBox2 = new System.Windows.Forms.MaskedTextBox();
             this.register_button = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // username_textbox
+            // usernameBox
             // 
-            this.username_textbox.Location = new System.Drawing.Point(323, 109);
-            this.username_textbox.Name = "username_textbox";
-            this.username_textbox.Size = new System.Drawing.Size(100, 20);
-            this.username_textbox.TabIndex = 0;
-            this.username_textbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.usernameBox.Location = new System.Drawing.Point(323, 109);
+            this.usernameBox.Name = "usernameBox";
+            this.usernameBox.Size = new System.Drawing.Size(100, 20);
+            this.usernameBox.TabIndex = 0;
+            this.usernameBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -58,12 +58,14 @@
             this.label1.Text = "username";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // password_textbox
+            // passwordBox
             // 
-            this.password_textbox.Location = new System.Drawing.Point(323, 135);
-            this.password_textbox.Name = "password_textbox";
-            this.password_textbox.Size = new System.Drawing.Size(100, 20);
-            this.password_textbox.TabIndex = 2;
+            this.passwordBox.AsciiOnly = true;
+            this.passwordBox.Location = new System.Drawing.Point(323, 135);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.Size = new System.Drawing.Size(100, 20);
+            this.passwordBox.TabIndex = 2;
+            this.passwordBox.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -83,12 +85,13 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "reenter password";
             // 
-            // password_texbox2
+            // passwordBox2
             // 
-            this.password_texbox2.Location = new System.Drawing.Point(323, 161);
-            this.password_texbox2.Name = "password_texbox2";
-            this.password_texbox2.Size = new System.Drawing.Size(100, 20);
-            this.password_texbox2.TabIndex = 4;
+            this.passwordBox2.Location = new System.Drawing.Point(323, 161);
+            this.passwordBox2.Name = "passwordBox2";
+            this.passwordBox2.Size = new System.Drawing.Size(100, 20);
+            this.passwordBox2.TabIndex = 4;
+            this.passwordBox2.UseSystemPasswordChar = true;
             // 
             // register_button
             // 
@@ -121,11 +124,11 @@
             this.ClientSize = new System.Drawing.Size(476, 303);
             this.Controls.Add(this.register_button);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.password_texbox2);
+            this.Controls.Add(this.passwordBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.password_textbox);
+            this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.username_textbox);
+            this.Controls.Add(this.usernameBox);
             this.Controls.Add(this.pictureBox1);
             this.Name = "RegistrationPage";
             this.Text = "RegistrationPage";
@@ -137,12 +140,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox username_textbox;
+        private System.Windows.Forms.TextBox usernameBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox password_textbox;
+        private System.Windows.Forms.MaskedTextBox passwordBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox password_texbox2;
+        private System.Windows.Forms.MaskedTextBox passwordBox2;
         private System.Windows.Forms.Button register_button;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

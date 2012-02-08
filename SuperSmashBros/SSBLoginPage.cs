@@ -12,7 +12,6 @@ namespace SuperSmashBros
 {
     public partial class SSBLoginPage : Form
     {
-        readonly string pwd = "supersmashbros";
         public SSBLoginPage()
         {
             InitializeComponent();
@@ -35,7 +34,7 @@ namespace SuperSmashBros
             string password = passwordBox.Text;
 
             string connectionString = "user id=CSSE333-201212-SuperSmashBros;" +
-                                       "Password="+pwd+";" +
+                                       "Password=supersmashbros;" +
                                        "server=whale.cs.rose-hulman.edu;" +
                                        "Trusted_Connection=no;" +
                                        "Database=SuperSmashBros;" +
@@ -43,19 +42,28 @@ namespace SuperSmashBros
                                        "TrustServerCertificate=true";
 
             SqlConnection connection = new SqlConnection(connectionString);
+
             try
             {
                 connection.Open();
-                string commandString = "SELECT * FROM PLAYER AS p WHERE p.Username = \'" +
-                    username + "\' AND p.Password = \'" + password + "\'";
-                MessageBox.Show(commandString);
+                string commandString = "SELECT * " +
+                                        "FROM PLAYER AS p " +
+                                        "WHERE p.Username = \'" + username + "\' AND p.Password = \'" + password + "\'";
+
                 SqlDataReader sdr = null;
                 SqlCommand command = new SqlCommand(commandString, connection);
                 sdr = command.ExecuteReader();
+
                 if (sdr.Read())
-                    MessageBox.Show("Yeah");
+                {
+                    MessageBox.Show("You exist in the database!");
+                    sdr.Close();
+                }
                 else
-                    MessageBox.Show("Oops");
+                {
+                    MessageBox.Show("Login failed.  Try again or register!");
+                    sdr.Close();
+                }
             }
             catch (Exception ex)
             {
@@ -72,8 +80,6 @@ namespace SuperSmashBros
         #region registerButton Event
         private void registerButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Register Button Clicked");
-
             this.Hide();
             RegistrationPage register_form = new RegistrationPage();
             register_form.ShowDialog();
