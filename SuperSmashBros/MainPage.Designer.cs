@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.tabController = new System.Windows.Forms.TabControl();
-            this.mainTab = new System.Windows.Forms.TabPage();
             this.playerInfoTab = new System.Windows.Forms.TabPage();
             this.gameInfoTab = new System.Windows.Forms.TabPage();
             this.matchInfoTab = new System.Windows.Forms.TabPage();
             this.logoutButton = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabController.SuspendLayout();
+            this.matchInfoTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabController
@@ -42,7 +43,6 @@
             this.tabController.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabController.Controls.Add(this.mainTab);
             this.tabController.Controls.Add(this.playerInfoTab);
             this.tabController.Controls.Add(this.gameInfoTab);
             this.tabController.Controls.Add(this.matchInfoTab);
@@ -52,17 +52,6 @@
             this.tabController.SelectedIndex = 0;
             this.tabController.Size = new System.Drawing.Size(968, 517);
             this.tabController.TabIndex = 0;
-            // 
-            // mainTab
-            // 
-            this.mainTab.Location = new System.Drawing.Point(4, 25);
-            this.mainTab.Name = "mainTab";
-            this.mainTab.Padding = new System.Windows.Forms.Padding(3);
-            this.mainTab.Size = new System.Drawing.Size(960, 488);
-            this.mainTab.TabIndex = 0;
-            this.mainTab.Text = "Main";
-            this.mainTab.UseVisualStyleBackColor = true;
-            this.mainTab.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // playerInfoTab
             // 
@@ -86,6 +75,7 @@
             // 
             // matchInfoTab
             // 
+            this.matchInfoTab.Controls.Add(this.listBox1);
             this.matchInfoTab.Location = new System.Drawing.Point(4, 25);
             this.matchInfoTab.Name = "matchInfoTab";
             this.matchInfoTab.Padding = new System.Windows.Forms.Padding(3);
@@ -103,7 +93,15 @@
             this.logoutButton.TabIndex = 1;
             this.logoutButton.Text = "Logout";
             this.logoutButton.UseVisualStyleBackColor = true;
-            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(217, 117);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 84);
+            this.listBox1.TabIndex = 0;
             // 
             // MainPage
             // 
@@ -114,8 +112,8 @@
             this.Controls.Add(this.tabController);
             this.Name = "MainPage";
             this.Text = "MainPage";
-            this.Load += new System.EventHandler(this.MainPage_Load);
             this.tabController.ResumeLayout(false);
+            this.matchInfoTab.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -123,10 +121,10 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabController;
-        private System.Windows.Forms.TabPage mainTab;
         private System.Windows.Forms.TabPage playerInfoTab;
         private System.Windows.Forms.TabPage gameInfoTab;
         private System.Windows.Forms.TabPage matchInfoTab;
         private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

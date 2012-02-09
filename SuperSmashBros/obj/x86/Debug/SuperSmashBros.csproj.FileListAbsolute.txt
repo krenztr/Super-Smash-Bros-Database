@@ -28,3 +28,4 @@ C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Data
 C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\SuperSmashBros.Properties.Resources.resources
 C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\SuperSmashBros.MatchTabPage.resources

@@ -22,19 +22,9 @@ namespace SuperSmashBros
             return null;
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void MainPage_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void logoutButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
