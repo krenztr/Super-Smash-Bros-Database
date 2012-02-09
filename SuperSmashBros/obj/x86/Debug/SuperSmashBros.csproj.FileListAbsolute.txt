@@ -24,7 +24,6 @@ C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Data
 C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\SuperSmashBros.MainPage.resources
 C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\SuperSmashBros.RegistrationPage.resources
-C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\SuperSmashBros.SSBLoginPage.resources
 C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\SuperSmashBros.Properties.Resources.resources
 C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\GenerateResource.write.1.tlog
@@ -39,3 +38,5 @@ C:\Users\thairp\workspace\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug
 C:\Users\thairp\workspace\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\SuperSmashBros.Properties.Resources.resources
 C:\Users\thairp\workspace\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\thairp\workspace\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\SuperSmashBros.MatchInfoPage.resources
+C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\SuperSmashBros.LoginPage.resources

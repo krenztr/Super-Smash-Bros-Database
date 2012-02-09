@@ -122,7 +122,7 @@ namespace SuperSmashBros
 
             this.Hide();
 
-            SSBLoginPage login_form = new SSBLoginPage();
+            LoginPage login_form = new LoginPage();
             login_form.ShowDialog();
         }
 
@@ -130,7 +130,7 @@ namespace SuperSmashBros
         {
             this.Hide();
 
-            SSBLoginPage login_form = new SSBLoginPage();
+            LoginPage login_form = new LoginPage();
             login_form.ShowDialog();
         }
     }

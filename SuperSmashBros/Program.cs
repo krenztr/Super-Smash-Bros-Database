@@ -15,7 +15,7 @@ namespace SuperSmashBros
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SSBLoginPage());
+            Application.Run(new LoginPage());
         }
     }
 }

@@ -33,16 +33,17 @@
             this.playerInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matchInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gameInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // logoutButton
             // 
             this.logoutButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.logoutButton.Location = new System.Drawing.Point(674, -1);
-            this.logoutButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logoutButton.Location = new System.Drawing.Point(899, -1);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(56, 26);
+            this.logoutButton.Size = new System.Drawing.Size(75, 32);
             this.logoutButton.TabIndex = 1;
             this.logoutButton.Text = "Logout";
             this.logoutButton.UseVisualStyleBackColor = true;
@@ -56,42 +57,53 @@
             this.gameInfoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(744, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(992, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // playerInfoToolStripMenuItem
             // 
             this.playerInfoToolStripMenuItem.Name = "playerInfoToolStripMenuItem";
-            this.playerInfoToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.playerInfoToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
             this.playerInfoToolStripMenuItem.Text = "Player Info";
             this.playerInfoToolStripMenuItem.Click += new System.EventHandler(this.playerInfoToolStripMenuItem_Click);
             // 
             // matchInfoToolStripMenuItem
             // 
             this.matchInfoToolStripMenuItem.Name = "matchInfoToolStripMenuItem";
-            this.matchInfoToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.matchInfoToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
             this.matchInfoToolStripMenuItem.Text = "Match Info";
+            this.matchInfoToolStripMenuItem.Click += new System.EventHandler(this.matchInfoToolStripMenuItem_Click);
             // 
             // gameInfoToolStripMenuItem
             // 
             this.gameInfoToolStripMenuItem.Name = "gameInfoToolStripMenuItem";
-            this.gameInfoToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.gameInfoToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
             this.gameInfoToolStripMenuItem.Text = "Game Info";
+            this.gameInfoToolStripMenuItem.Click += new System.EventHandler(this.gameInfoToolStripMenuItem_Click);
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 28);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(992, 514);
+            this.mainPanel.TabIndex = 3;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // MainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(744, 440);
+            this.ClientSize = new System.Drawing.Size(992, 542);
+            this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainPage";
             this.Text = "MainPage";
-            this.Load += new System.EventHandler(this.MainPage_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -106,5 +118,6 @@
         private System.Windows.Forms.ToolStripMenuItem playerInfoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem matchInfoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gameInfoToolStripMenuItem;
+        private System.Windows.Forms.Panel mainPanel;
     }
 }

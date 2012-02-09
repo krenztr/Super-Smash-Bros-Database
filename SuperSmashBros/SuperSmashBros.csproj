@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameInfoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameInfoPage.Designer.cs">
+      <DependentUpon>GameInfoPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatchInfoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MatchInfoPage.Designer.cs">
+      <DependentUpon>MatchInfoPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerInfoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlayerInfoPage.Designer.cs">
+      <DependentUpon>PlayerInfoPage.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistrationPage.cs">
       <SubType>Form</SubType>
@@ -58,22 +76,25 @@
     <Compile Include="RegistrationPage.Designer.cs">
       <DependentUpon>RegistrationPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="SSBLoginPage.cs">
+    <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SSBLoginPage.Designer.cs">
-      <DependentUpon>SSBLoginPage.cs</DependentUpon>
+    <Compile Include="LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MatchInfoPage.resx">
+      <DependentUpon>MatchInfoPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistrationPage.resx">
       <DependentUpon>RegistrationPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SSBLoginPage.resx">
-      <DependentUpon>SSBLoginPage.cs</DependentUpon>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
