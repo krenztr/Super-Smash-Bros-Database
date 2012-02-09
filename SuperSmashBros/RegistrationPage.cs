@@ -56,7 +56,7 @@ namespace SuperSmashBros
                                        "TrustServerCertificate=true";
 
             SqlConnection connection = new SqlConnection(connectionString);
-            SqlDataReader sdr = null;
+            SqlDataReader sdr = null; // blah
 
             try
             {
@@ -77,13 +77,15 @@ namespace SuperSmashBros
 
                 else
                 {
+                    sdr.Close();
+
                     commandString = "INSERT INTO PLAYER " +
-                                    "(Username, Password) " +
+                                    "(Username, Password, Wins, Losses) " +
                                     "VALUES " +
-                                    "( \'" + username + "\',\'" + password + "\'); " +
+                                    "( \'" + username + "\',\'" + password + "\',0,0); " +
                                     "SELECT * FROM PLAYER AS p " +
-                                    "WHERE p.Username = \'" + username;
-                    
+                                    "WHERE p.Username = \'" + username + "\'";
+
                     command = new SqlCommand(commandString, connection);
                     sdr = command.ExecuteReader();
 
