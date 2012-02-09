@@ -42,6 +42,7 @@ namespace SuperSmashBros
                                        "TrustServerCertificate=true";
 
             SqlConnection connection = new SqlConnection(connectionString);
+            SqlDataReader sdr = null;
 
             try
             {
@@ -50,20 +51,14 @@ namespace SuperSmashBros
                                         "FROM PLAYER AS p " +
                                         "WHERE p.Username = \'" + username + "\' AND p.Password = \'" + password + "\'";
 
-                SqlDataReader sdr = null;
                 SqlCommand command = new SqlCommand(commandString, connection);
                 sdr = command.ExecuteReader();
 
                 if (sdr.Read())
-                {
                     MessageBox.Show("You exist in the database!");
-                    sdr.Close();
-                }
+
                 else
-                {
                     MessageBox.Show("Login failed.  Try again or register!");
-                    sdr.Close();
-                }
             }
             catch (Exception ex)
             {
@@ -71,6 +66,7 @@ namespace SuperSmashBros
             }
             finally
             {
+                sdr.Close();
                 connection.Close();
                 connection.Dispose();
             }
@@ -81,6 +77,8 @@ namespace SuperSmashBros
         private void registerButton_Click(object sender, EventArgs e)
         {
             this.Hide();
+            
+
             RegistrationPage register_form = new RegistrationPage();
             register_form.ShowDialog();
         }

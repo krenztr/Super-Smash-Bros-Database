@@ -56,6 +56,8 @@ namespace SuperSmashBros
                                        "TrustServerCertificate=true";
 
             SqlConnection connection = new SqlConnection(connectionString);
+            SqlDataReader sdr = null;
+
             try
             {
                 connection.Open();
@@ -63,7 +65,6 @@ namespace SuperSmashBros
                 string commandString = "SELECT * FROM PLAYER AS p " +
                                         "WHERE p.Username = \'" + username + "\'";
 
-                SqlDataReader sdr = null;
                 SqlCommand command = new SqlCommand(commandString, connection);
                 sdr = command.ExecuteReader();
                 
@@ -79,29 +80,18 @@ namespace SuperSmashBros
                     commandString = "INSERT INTO PLAYER " +
                                     "(Username, Password) " +
                                     "VALUES " +
-                                    "( \'" + username + "\',\'" + password + "\')";
+                                    "( \'" + username + "\',\'" + password + "\'); " +
+                                    "SELECT * FROM PLAYER AS p " +
+                                    "WHERE p.Username = \'" + username;
                     
                     command = new SqlCommand(commandString, connection);
                     sdr = command.ExecuteReader();
-                    sdr.Close();
-
-                    commandString = "SELECT * FROM PLAYER AS p " +
-                                    "WHERE p.Username = \'" + username;
-                    command = new SqlCommand(commandString, connection);
-                    sdr = command.ExecuteReader();
-                    sdr.Close();
 
                     if (sdr.Read())
-                    {
                         MessageBox.Show("You have been successfully registered!");
-                        sdr.Close();
-                    }
 
                     else
-                    {
                         MessageBox.Show("Failure to register!");
-                        sdr.Close();
-                    }
                 }
             }
             catch (Exception ex)
@@ -112,6 +102,7 @@ namespace SuperSmashBros
             {
                 connection.Close();
                 connection.Dispose();
+                sdr.Close();
             }
 
             this.Hide();
