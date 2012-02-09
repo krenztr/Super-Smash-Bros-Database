@@ -15,6 +15,7 @@ namespace SuperSmashBros
         public RegistrationPage()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -38,12 +39,24 @@ namespace SuperSmashBros
             string password = passwordBox.Text;
             string password2 = passwordBox2.Text;
 
+            if ("" == username)
+            {
+                MessageBox.Show("We don't take kindly to nameless folk around here.");
+                return;
+            }
+
             if (password != password2)
             {
                 MessageBox.Show("Passwords do not match, please reenter them.");
                 passwordBox.Clear();
                 passwordBox2.Clear();
 
+                return;
+            }
+
+            if ("" == password)
+            {
+                MessageBox.Show("What good is a lockless door?");
                 return;
             }
 
@@ -107,6 +120,14 @@ namespace SuperSmashBros
                 sdr.Close();
             }
 
+            this.Hide();
+
+            SSBLoginPage login_form = new SSBLoginPage();
+            login_form.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             this.Hide();
 
             SSBLoginPage login_form = new SSBLoginPage();

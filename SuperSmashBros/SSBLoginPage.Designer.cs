@@ -109,7 +109,7 @@
             // 
             this.registerButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.registerButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.registerButton.Font = new System.Drawing.Font("Consolas", 10F);
+            this.registerButton.Font = new System.Drawing.Font("ESSTIXThirteen", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.registerButton.Location = new System.Drawing.Point(287, 451);
             this.registerButton.Margin = new System.Windows.Forms.Padding(0);

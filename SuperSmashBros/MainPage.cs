@@ -14,6 +14,7 @@ namespace SuperSmashBros
         public MainPage()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private object mainPageOnClosing()
@@ -30,6 +31,18 @@ namespace SuperSmashBros
         private void playerInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Something");
+        }
+
+        private void MainPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SSBLoginPage loginPage = new SSBLoginPage();
+            loginPage.Show();
         }
     }
 }

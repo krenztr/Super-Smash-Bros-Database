@@ -18,6 +18,8 @@ namespace SuperSmashBros
             usernameBox.KeyPress += new KeyPressEventHandler(usernameBox_KeyPress);
             passwordBox.KeyDown += new KeyEventHandler(passwordBox_KeyDown);
             passwordBox.UseSystemPasswordChar = true;
+
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void SSBLoginPage_Load(object sender, EventArgs e)
