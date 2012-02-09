@@ -55,8 +55,15 @@ namespace SuperSmashBros
                 sdr = command.ExecuteReader();
 
                 if (sdr.Read())
-                    MessageBox.Show("You exist in the database!");
-
+                {
+                    this.Hide();
+                    sdr.Close();
+                    connection.Close();
+                    connection.Dispose();
+                    MainPage main = new MainPage();
+                    main.FormClosing += new FormClosingEventHandler(main_FormClosing);
+                    main.Show();
+                } 
                 else
                     MessageBox.Show("Login failed.  Try again or register!");
             }
@@ -70,6 +77,11 @@ namespace SuperSmashBros
                 connection.Close();
                 connection.Dispose();
             }
+        }
+
+        void main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Show();
         }
         #endregion
 

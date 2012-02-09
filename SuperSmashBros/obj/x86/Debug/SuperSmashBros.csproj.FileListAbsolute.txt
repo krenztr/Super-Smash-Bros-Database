@@ -17,3 +17,14 @@ C:\Users\thairp\workspace\SSBB\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\
 C:\Users\thairp\workspace\SSBB\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\thairp\workspace\SSBB\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\thairp\workspace\SSBB\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\SuperSmashBros.RegistrationPage.resources
+C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\SuperSmashBros.exe
+C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\SuperSmashBros.pdb
+C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\bin\Debug\SuperSmashBros.exe
+C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\bin\Debug\SuperSmashBros.pdb
+C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\SuperSmashBros.MainPage.resources
+C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\SuperSmashBros.RegistrationPage.resources
+C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\SuperSmashBros.SSBLoginPage.resources
+C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\SuperSmashBros.Properties.Resources.resources
+C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\RCZ\Documents\Visual Studio 2010\Projects\CSSE333\Super-Smash-Bros-Database\SuperSmashBros\obj\x86\Debug\GenerateResource.write.1.tlog
