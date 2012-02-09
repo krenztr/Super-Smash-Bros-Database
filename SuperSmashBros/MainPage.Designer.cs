@@ -28,61 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabController = new System.Windows.Forms.TabControl();
-            this.playerInfoTab = new System.Windows.Forms.TabPage();
-            this.gameInfoTab = new System.Windows.Forms.TabPage();
-            this.matchInfoTab = new System.Windows.Forms.TabPage();
             this.logoutButton = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.tabController.SuspendLayout();
-            this.matchInfoTab.SuspendLayout();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.playerInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.matchInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gameInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tabController
-            // 
-            this.tabController.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabController.Controls.Add(this.playerInfoTab);
-            this.tabController.Controls.Add(this.gameInfoTab);
-            this.tabController.Controls.Add(this.matchInfoTab);
-            this.tabController.Location = new System.Drawing.Point(12, 12);
-            this.tabController.Margin = new System.Windows.Forms.Padding(0);
-            this.tabController.Name = "tabController";
-            this.tabController.SelectedIndex = 0;
-            this.tabController.Size = new System.Drawing.Size(968, 517);
-            this.tabController.TabIndex = 0;
-            // 
-            // playerInfoTab
-            // 
-            this.playerInfoTab.Location = new System.Drawing.Point(4, 25);
-            this.playerInfoTab.Name = "playerInfoTab";
-            this.playerInfoTab.Padding = new System.Windows.Forms.Padding(3);
-            this.playerInfoTab.Size = new System.Drawing.Size(960, 488);
-            this.playerInfoTab.TabIndex = 1;
-            this.playerInfoTab.Text = "Player Info";
-            this.playerInfoTab.UseVisualStyleBackColor = true;
-            // 
-            // gameInfoTab
-            // 
-            this.gameInfoTab.Location = new System.Drawing.Point(4, 25);
-            this.gameInfoTab.Name = "gameInfoTab";
-            this.gameInfoTab.Padding = new System.Windows.Forms.Padding(3);
-            this.gameInfoTab.Size = new System.Drawing.Size(960, 488);
-            this.gameInfoTab.TabIndex = 2;
-            this.gameInfoTab.Text = "Game Info";
-            this.gameInfoTab.UseVisualStyleBackColor = true;
-            // 
-            // matchInfoTab
-            // 
-            this.matchInfoTab.Controls.Add(this.listBox1);
-            this.matchInfoTab.Location = new System.Drawing.Point(4, 25);
-            this.matchInfoTab.Name = "matchInfoTab";
-            this.matchInfoTab.Padding = new System.Windows.Forms.Padding(3);
-            this.matchInfoTab.Size = new System.Drawing.Size(960, 488);
-            this.matchInfoTab.TabIndex = 3;
-            this.matchInfoTab.Text = "Match Info";
-            this.matchInfoTab.UseVisualStyleBackColor = true;
             // 
             // logoutButton
             // 
@@ -94,14 +46,36 @@
             this.logoutButton.Text = "Logout";
             this.logoutButton.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // menuStrip1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(217, 117);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 84);
-            this.listBox1.TabIndex = 0;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.playerInfoToolStripMenuItem,
+            this.matchInfoToolStripMenuItem,
+            this.gameInfoToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(992, 28);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // playerInfoToolStripMenuItem
+            // 
+            this.playerInfoToolStripMenuItem.Name = "playerInfoToolStripMenuItem";
+            this.playerInfoToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
+            this.playerInfoToolStripMenuItem.Text = "Player Info";
+            this.playerInfoToolStripMenuItem.Click += new System.EventHandler(this.playerInfoToolStripMenuItem_Click);
+            // 
+            // matchInfoToolStripMenuItem
+            // 
+            this.matchInfoToolStripMenuItem.Name = "matchInfoToolStripMenuItem";
+            this.matchInfoToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
+            this.matchInfoToolStripMenuItem.Text = "Match Info";
+            // 
+            // gameInfoToolStripMenuItem
+            // 
+            this.gameInfoToolStripMenuItem.Name = "gameInfoToolStripMenuItem";
+            this.gameInfoToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
+            this.gameInfoToolStripMenuItem.Text = "Game Info";
             // 
             // MainPage
             // 
@@ -109,22 +83,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(992, 541);
             this.Controls.Add(this.logoutButton);
-            this.Controls.Add(this.tabController);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainPage";
             this.Text = "MainPage";
-            this.tabController.ResumeLayout(false);
-            this.matchInfoTab.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabController;
-        private System.Windows.Forms.TabPage playerInfoTab;
-        private System.Windows.Forms.TabPage gameInfoTab;
-        private System.Windows.Forms.TabPage matchInfoTab;
         private System.Windows.Forms.Button logoutButton;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem playerInfoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem matchInfoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gameInfoToolStripMenuItem;
     }
 }

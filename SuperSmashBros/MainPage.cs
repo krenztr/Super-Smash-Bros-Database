@@ -26,5 +26,10 @@ namespace SuperSmashBros
         {
 
         }
+
+        private void playerInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Something");
+        }
     }
 }
