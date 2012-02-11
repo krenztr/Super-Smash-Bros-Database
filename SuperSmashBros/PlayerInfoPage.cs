@@ -27,6 +27,7 @@ namespace SuperSmashBros
 
         void PlayerInfoPage_SizeChanged(object sender, EventArgs e)
         {
+            this.splitPanels.Size = this.Size;
             this.splitPanels.SplitterDistance = this.Width / 2;
         }
     }
