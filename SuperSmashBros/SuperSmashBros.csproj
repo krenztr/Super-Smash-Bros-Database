@@ -90,6 +90,9 @@
     <EmbeddedResource Include="MatchInfoPage.resx">
       <DependentUpon>MatchInfoPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PlayerInfoPage.resx">
+      <DependentUpon>PlayerInfoPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistrationPage.resx">
       <DependentUpon>RegistrationPage.cs</DependentUpon>
     </EmbeddedResource>
