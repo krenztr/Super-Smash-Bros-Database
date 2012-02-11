@@ -56,17 +56,19 @@ namespace SuperSmashBros
                 //"WHERE p.Username = \'" + username + "\' AND p.Password = \'" + password + "\'";
 
                 SqlCommand command = new SqlCommand(cmd, connection);
-                SqlParameter retval = null;
                 command.CommandType = CommandType.StoredProcedure;
 
+                SqlParameter retval = new SqlParameter("@Return_Value", SqlDbType.Int);
                 retval.Direction = ParameterDirection.ReturnValue;
+                retval.Value = -1;
 
                 command.Parameters.Add(new SqlParameter("@pUsername", username));
                 command.Parameters.Add(new SqlParameter("@pPassword", password));
+                command.Parameters.Add(retval);
 
                 command.ExecuteNonQuery();
 
-                //int success = command.Parameters[@RETURN_VALUE];
+                int success = Int32.Parse(retval.Value.ToString());
 
                 if (success > 0)
                 {
