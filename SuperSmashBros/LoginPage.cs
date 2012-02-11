@@ -24,11 +24,11 @@ namespace SuperSmashBros
 
         private void SSBLoginPage_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         #region Events
-        
+
         #region enterButton Event
         private void enterButton_Click(object sender, EventArgs e)
         {
@@ -43,29 +43,39 @@ namespace SuperSmashBros
                                        "connection timeout=30;" +
                                        "TrustServerCertificate=true";
 
-            SqlConnection connection = new SqlConnection(connectionString);
+            SqlConnection connection = null;
             SqlDataReader sdr = null;
 
             try
             {
+                connection = new SqlConnection(connectionString);
                 connection.Open();
-                string commandString = //"EXEC LoginPlayer \'" + username + "\',\'" + password + "\'";
-                "SELECT * " +
-                                        "FROM PLAYER AS p " +
-                                        "WHERE p.Username = \'" + username + "\' AND p.Password = \'" + password + "\'";
+                string cmd = "LoginPlayer";
+                //"SELECT * " +
+                //"FROM PLAYER AS p " +
+                //"WHERE p.Username = \'" + username + "\' AND p.Password = \'" + password + "\'";
 
-                SqlCommand command = new SqlCommand(commandString, connection);
-                sdr = command.ExecuteReader();
+                SqlCommand command = new SqlCommand(cmd, connection);
+                SqlParameter retval = null;
+                command.CommandType = CommandType.StoredProcedure;
 
-                if (sdr.Read())
+                retval.Direction = ParameterDirection.ReturnValue;
+
+                command.Parameters.Add(new SqlParameter("@pUsername", username));
+                command.Parameters.Add(new SqlParameter("@pPassword", password));
+
+                command.ExecuteNonQuery();
+
+                //int success = command.Parameters[@RETURN_VALUE];
+
+                if (success > 0)
                 {
-                    sdr.Close();
                     connection.Close();
                     connection.Dispose();
                     MainPage main = new MainPage(this);
                     main.Show();
                     this.Hide();
-                } 
+                }
                 else
                     MessageBox.Show("Login failed.  Try again or register!");
             }
@@ -75,9 +85,15 @@ namespace SuperSmashBros
             }
             finally
             {
-                sdr.Close();
-                connection.Close();
-                connection.Dispose();
+                if (null != connection)
+                {
+                    connection.Close();
+                    connection.Dispose();
+                }
+                if (null != sdr)
+                {
+                    sdr.Close();
+                }
             }
         }
         #endregion
@@ -86,7 +102,7 @@ namespace SuperSmashBros
         private void registerButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            
+
 
             RegistrationPage register_form = new RegistrationPage();
             register_form.ShowDialog();
@@ -109,8 +125,8 @@ namespace SuperSmashBros
             if (e.KeyCode == Keys.Enter)
                 enterButton.PerformClick();
         }
-        #endregion 
-        
+        #endregion
+
         #endregion
     }
 }

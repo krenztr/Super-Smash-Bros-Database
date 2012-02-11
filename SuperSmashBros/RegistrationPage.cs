@@ -68,29 +68,36 @@ namespace SuperSmashBros
                                        "connection timeout=30;" +
                                        "TrustServerCertificate=true";
 
-            SqlConnection connection = new SqlConnection(connectionString);
+            SqlConnection connection = null;
 
             try
             {
+                connection = new SqlConnection(connectionString);
                 connection.Open();
 
-                string commandString = "EXEC RegisterPlayer \'" + username + "\',\'" + password + "\'";
+                string cmd = "RegisterPlayer";
 
-                    SqlCommand command = new SqlCommand(commandString, connection);
-                    int rows_affected = command.ExecuteNonQuery();
+                SqlCommand command = new SqlCommand(cmd, connection);
 
-                    if (rows_affected > 0)
-                        MessageBox.Show("You have been successfully registered!");
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Add(new SqlParameter("@pUsername", username));
+                command.Parameters.Add(new SqlParameter("@pPassword", password));
 
-                    else
-                    {
-                        MessageBox.Show("Sorry, that username is already taken.");
-                        connection.Close();
-                        connection.Dispose();
-                        usernameBox.Clear();
-                        return;
-                    }
-                
+
+                int rows_affected = command.ExecuteNonQuery();
+
+                if (rows_affected > 0)
+                    MessageBox.Show("You have been successfully registered!");
+
+                else
+                {
+                    MessageBox.Show("Sorry, that username is already taken.");
+                    connection.Close();
+                    connection.Dispose();
+                    usernameBox.Clear();
+                    return;
+                }
+
             }
             catch (Exception ex)
             {
@@ -98,8 +105,11 @@ namespace SuperSmashBros
             }
             finally
             {
-                connection.Close();
-                connection.Dispose();
+                if (connection != null)
+                {
+                    connection.Close();
+                    connection.Dispose();
+                }
             }
 
             this.Hide();
