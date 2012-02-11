@@ -14,6 +14,28 @@ namespace SuperSmashBros
         public MatchInfoPage()
         {
             InitializeComponent();
+            numPlayersBox.SelectedIndex = 0;
+        }
+
+        private void numPlayersBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            playerBName.Enabled = false;
+            playerCName.Enabled = false;
+            playerDName.Enabled = false;
+            switch (numPlayersBox.SelectedIndex)
+            {
+                case 3:
+                    playerDName.Enabled = true;
+                    goto case 2;
+                case 2:
+                    playerCName.Enabled = true;
+                    goto case 1;
+                case 1:
+                    playerBName.Enabled = true;
+                    goto case 0;
+                case 0:
+                    break;
+            }
         }
     }
 }

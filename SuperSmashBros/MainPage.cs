@@ -72,6 +72,8 @@ namespace SuperSmashBros
                 int idx = mainPanel.Controls.IndexOf(activePage);
                 mainPanel.Controls[idx].Show();
                 matchPage.Size = mainPanel.Size;
+                playerPage.Size = mainPanel.Size;
+                gamePage.Size = mainPanel.Size;
             }
         }
 

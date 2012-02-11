@@ -28,8 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // PlayerInfoPage
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.Name = "PlayerInfoPage";
+            this.Size = new System.Drawing.Size(811, 592);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
