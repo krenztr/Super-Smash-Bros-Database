@@ -69,45 +69,28 @@ namespace SuperSmashBros
                                        "TrustServerCertificate=true";
 
             SqlConnection connection = new SqlConnection(connectionString);
-            SqlDataReader sdr = null; // blah
 
             try
             {
                 connection.Open();
 
-                string commandString = "SELECT * FROM PLAYER AS p " +
-                                        "WHERE p.Username = \'" + username + "\'";
+                string commandString = "EXEC RegisterPlayer \'" + username + "\',\'" + password + "\'";
 
-                SqlCommand command = new SqlCommand(commandString, connection);
-                sdr = command.ExecuteReader();
-                
-                if (sdr.Read())
-                {
-                    MessageBox.Show("Sorry, that username is already taken.");
-                    sdr.Close();
-                    return;
-                }
+                    SqlCommand command = new SqlCommand(commandString, connection);
+                    int rows_affected = command.ExecuteNonQuery();
 
-                else
-                {
-                    sdr.Close();
-
-                    commandString = "INSERT INTO PLAYER " +
-                                    "(Username, Password, Wins, Losses) " +
-                                    "VALUES " +
-                                    "( \'" + username + "\',\'" + password + "\',0,0); " +
-                                    "SELECT * FROM PLAYER AS p " +
-                                    "WHERE p.Username = \'" + username + "\'";
-
-                    command = new SqlCommand(commandString, connection);
-                    sdr = command.ExecuteReader();
-
-                    if (sdr.Read())
+                    if (rows_affected > 0)
                         MessageBox.Show("You have been successfully registered!");
 
                     else
-                        MessageBox.Show("Failure to register!");
-                }
+                    {
+                        MessageBox.Show("Sorry, that username is already taken.");
+                        connection.Close();
+                        connection.Dispose();
+                        usernameBox.Clear();
+                        return;
+                    }
+                
             }
             catch (Exception ex)
             {
@@ -117,7 +100,6 @@ namespace SuperSmashBros
             {
                 connection.Close();
                 connection.Dispose();
-                sdr.Close();
             }
 
             this.Hide();

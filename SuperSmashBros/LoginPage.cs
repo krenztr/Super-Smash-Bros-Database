@@ -49,7 +49,8 @@ namespace SuperSmashBros
             try
             {
                 connection.Open();
-                string commandString = "SELECT * " +
+                string commandString = //"EXEC LoginPlayer \'" + username + "\',\'" + password + "\'";
+                "SELECT * " +
                                         "FROM PLAYER AS p " +
                                         "WHERE p.Username = \'" + username + "\' AND p.Password = \'" + password + "\'";
 
