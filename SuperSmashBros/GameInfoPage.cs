@@ -25,6 +25,10 @@ namespace SuperSmashBros
         private void linkBox_Click(object sender, EventArgs e)
         {
             charPicture.Image = global::SuperSmashBros.Properties.Resources.link;
+
+
+
+            charDescription.Text = "link!";
         }
     }
 }
