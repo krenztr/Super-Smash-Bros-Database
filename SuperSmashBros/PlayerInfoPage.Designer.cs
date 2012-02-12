@@ -37,7 +37,7 @@
             this.myFriendListView = new System.Windows.Forms.ListView();
             this.playerNameLabel = new System.Windows.Forms.Label();
             this.hiLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.myAvatar = new System.Windows.Forms.PictureBox();
             this.playerLossesCountLabel = new System.Windows.Forms.Label();
             this.playerFriendListView = new System.Windows.Forms.ListView();
             this.playerWinsCountLabel = new System.Windows.Forms.Label();
@@ -47,13 +47,13 @@
             this.playerWinsLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.searchUserLabel = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.playerAvatar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitPanels)).BeginInit();
             this.splitPanels.Panel1.SuspendLayout();
             this.splitPanels.Panel2.SuspendLayout();
             this.splitPanels.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myAvatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // splitPanels
@@ -67,6 +67,7 @@
             // 
             // splitPanels.Panel1
             // 
+            this.splitPanels.Panel1.Controls.Add(this.myAvatar);
             this.splitPanels.Panel1.Controls.Add(this.myLossesCount);
             this.splitPanels.Panel1.Controls.Add(this.myWinsCount);
             this.splitPanels.Panel1.Controls.Add(this.myLossesLabel);
@@ -75,7 +76,6 @@
             this.splitPanels.Panel1.Controls.Add(this.myFriendListView);
             this.splitPanels.Panel1.Controls.Add(this.playerNameLabel);
             this.splitPanels.Panel1.Controls.Add(this.hiLabel);
-            this.splitPanels.Panel1.Controls.Add(this.pictureBox1);
             // 
             // splitPanels.Panel2
             // 
@@ -88,7 +88,7 @@
             this.splitPanels.Panel2.Controls.Add(this.playerWinsLabel);
             this.splitPanels.Panel2.Controls.Add(this.usernameTextBox);
             this.splitPanels.Panel2.Controls.Add(this.searchUserLabel);
-            this.splitPanels.Panel2.Controls.Add(this.pictureBox2);
+            this.splitPanels.Panel2.Controls.Add(this.playerAvatar);
             this.splitPanels.Size = new System.Drawing.Size(805, 586);
             this.splitPanels.SplitterDistance = 399;
             this.splitPanels.TabIndex = 0;
@@ -177,13 +177,13 @@
             this.hiLabel.TabIndex = 1;
             this.hiLabel.Text = "Hi, ";
             // 
-            // pictureBox1
+            // myAvatar
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(24, 74);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.myAvatar.Location = new System.Drawing.Point(24, 74);
+            this.myAvatar.Name = "myAvatar";
+            this.myAvatar.Size = new System.Drawing.Size(120, 120);
+            this.myAvatar.TabIndex = 0;
+            this.myAvatar.TabStop = false;
             // 
             // playerLossesCountLabel
             // 
@@ -248,6 +248,7 @@
             this.goButton.TabIndex = 4;
             this.goButton.Text = "GO";
             this.goButton.UseVisualStyleBackColor = true;
+            this.goButton.Click += new System.EventHandler(this.goButton_Click);
             // 
             // playerWinsLabel
             // 
@@ -276,13 +277,13 @@
             this.searchUserLabel.TabIndex = 2;
             this.searchUserLabel.Text = "Search User:";
             // 
-            // pictureBox2
+            // playerAvatar
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(24, 74);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(120, 120);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.playerAvatar.Location = new System.Drawing.Point(24, 74);
+            this.playerAvatar.Name = "playerAvatar";
+            this.playerAvatar.Size = new System.Drawing.Size(120, 120);
+            this.playerAvatar.TabIndex = 1;
+            this.playerAvatar.TabStop = false;
             // 
             // PlayerInfoPage
             // 
@@ -298,8 +299,8 @@
             this.splitPanels.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitPanels)).EndInit();
             this.splitPanels.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -307,8 +308,8 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitPanels;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox myAvatar;
+        private System.Windows.Forms.PictureBox playerAvatar;
         private System.Windows.Forms.Label hiLabel;
         private System.Windows.Forms.Label playerNameLabel;
         private System.Windows.Forms.Label searchUserLabel;
