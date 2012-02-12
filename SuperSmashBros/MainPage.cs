@@ -21,27 +21,33 @@ namespace SuperSmashBros
 
         private Control activePage = null;
 
-        public MainPage(LoginPage loginPage)
+        private string username = null;
+
+        private string password = null;
+
+        public MainPage(LoginPage loginPage, string username, string password)
         {
             InitializeComponent();
             this.loginPage = loginPage;
+            this.username = username;
+            this.password = password;
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            matchPage = new MatchInfoPage();
+            matchPage = new MatchInfoPage(username, password);
             matchPage.BackColor = Color.White;
             matchPage.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             matchPage.Anchor = (AnchorStyles.Left | AnchorStyles.Right
                 | AnchorStyles.Top | AnchorStyles.Bottom);
             matchPage.Hide();
 
-            playerPage = new PlayerInfoPage();
+            playerPage = new PlayerInfoPage(username, password);
             playerPage.BackColor = Color.White;
             playerPage.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             playerPage.Anchor = (AnchorStyles.Left | AnchorStyles.Right
                 | AnchorStyles.Top | AnchorStyles.Bottom);
             playerPage.Hide();
 
-            gamePage = new GameInfoPage();
+            gamePage = new GameInfoPage(username, password);
             gamePage.BackColor = Color.White;
             gamePage.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             gamePage.Anchor = (AnchorStyles.Left | AnchorStyles.Right

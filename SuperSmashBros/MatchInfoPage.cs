@@ -11,9 +11,15 @@ namespace SuperSmashBros
 {
     public partial class MatchInfoPage : UserControl
     {
-        public MatchInfoPage()
+        string username;
+
+        string password;
+
+        public MatchInfoPage(string username, string password)
         {
             InitializeComponent();
+            this.username = username;
+            this.password = password;
             numPlayersBox.SelectedIndex = 0;
         }
 

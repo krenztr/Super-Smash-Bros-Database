@@ -11,9 +11,15 @@ namespace SuperSmashBros
 {
     public partial class PlayerInfoPage : UserControl
     {
-        public PlayerInfoPage()
+        string username;
+
+        string password;
+
+        public PlayerInfoPage(string username, string password)
         {
             InitializeComponent();
+            this.username = username;
+            this.password = password;
             this.SizeChanged += new EventHandler(PlayerInfoPage_SizeChanged);
 
             this.splitPanels.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
