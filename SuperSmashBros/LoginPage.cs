@@ -43,6 +43,7 @@ namespace SuperSmashBros
                                        "connection timeout=30;" +
                                        "TrustServerCertificate=true";
 
+
             SqlConnection connection = null;
             SqlDataReader sdr = null;
 
@@ -74,7 +75,7 @@ namespace SuperSmashBros
                 {
                     connection.Close();
                     connection.Dispose();
-                    MainPage main = new MainPage(this);
+                    MainPage main = new MainPage(this, username, password);
                     main.Show();
                     this.Hide();
                 }
