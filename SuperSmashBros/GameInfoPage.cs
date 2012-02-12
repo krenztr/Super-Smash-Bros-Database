@@ -16,9 +16,9 @@ namespace SuperSmashBros
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void linkBox_Click(object sender, EventArgs e)
         {
-            charPicture.Image = new Image("Link_Profile.jpg");
+            charPicture.Image = global::SuperSmashBros.Properties.Resources.link;
         }
     }
 }
