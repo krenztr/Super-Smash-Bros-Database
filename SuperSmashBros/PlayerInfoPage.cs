@@ -50,19 +50,21 @@ namespace SuperSmashBros
                 command.Connection = connection;
                 command.Parameters.Add(new SqlParameter("@Username", username));
 
-                connection.Open();   
+                connection.Open();
                 sdr = command.ExecuteReader();
 
-                this.wins = sdr["Wins"].ToString();
-                this.playerWinsLabel.Text = wins;
-                this.losses = sdr["Losses"].ToString();
-                this.playerLossesLabel.Text = losses;
-                this.facCName = sdr["FavCName"].ToString();
-                
+                if (sdr.Read())
+                {
+                    this.wins = sdr[1].ToString();
+                    this.myWinsCount.Text = wins;
+                    this.losses = sdr[2].ToString();
+                    this.myLossesCount.Text = losses;
+                    this.facCName = sdr[3].ToString();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Exception: "+ex.Message);
             }
             finally
             {
