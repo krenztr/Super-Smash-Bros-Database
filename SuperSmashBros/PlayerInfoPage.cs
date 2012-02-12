@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SuperSmashBros
 {
@@ -15,12 +16,61 @@ namespace SuperSmashBros
 
         string password;
 
+        string facCName;
+
+        string wins;
+
+        string losses;
+
         public PlayerInfoPage(string username, string password)
         {
             InitializeComponent();
             this.username = username;
             this.password = password;
             this.SizeChanged += new EventHandler(PlayerInfoPage_SizeChanged);
+
+            this.playerNameLabel.Text = this.username;
+
+            string connectionString = "user id=CSSE333-201212-SuperSmashBros;" +
+                                       "Password=supersmashbros;" +
+                                       "server=whale.cs.rose-hulman.edu;" +
+                                       "Trusted_Connection=no;" +
+                                       "Database=SuperSmashBros;" +
+                                       "connection timeout=30;" +
+                                       "TrustServerCertificate=true";
+            SqlConnection connection = new SqlConnection(connectionString);
+            SqlDataReader sdr = null;
+            SqlCommand command = null;         
+            string cmd = "GetPlayerInfo";
+
+            try
+            {
+                command = new SqlCommand(cmd, connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Connection = connection;
+                command.Parameters.Add(new SqlParameter("@Username", username));
+
+                connection.Open();   
+                sdr = command.ExecuteReader();
+
+                this.wins = sdr["Wins"].ToString();
+                this.playerWinsLabel.Text = wins;
+                this.losses = sdr["Losses"].ToString();
+                this.playerLossesLabel.Text = losses;
+                this.facCName = sdr["FavCName"].ToString();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+                if (sdr != null)
+                    sdr.Close();
+            }
 
             this.splitPanels.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.splitPanels.Panel1.Anchor = (AnchorStyles.Left | AnchorStyles.Right

@@ -43,6 +43,7 @@ namespace SuperSmashBros
                                        "connection timeout=30;" +
                                        "TrustServerCertificate=true";
 
+
             SqlConnection connection = null;
             SqlDataReader sdr = null;
 

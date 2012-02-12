@@ -45,7 +45,8 @@ namespace SuperSmashBros
             playerPage.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             playerPage.Anchor = (AnchorStyles.Left | AnchorStyles.Right
                 | AnchorStyles.Top | AnchorStyles.Bottom);
-            playerPage.Hide();
+            playerPage.Show();
+            activePage = playerPage;
 
             gamePage = new GameInfoPage(username, password);
             gamePage.BackColor = Color.White;
