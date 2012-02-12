@@ -80,5 +80,19 @@ namespace SuperSmashBros.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        internal static System.Drawing.Bitmap Link_Profile {
+            get {
+                object obj = ResourceManager.GetObject("Link_Profile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Link_Profile1 {
+            get {
+                object obj = ResourceManager.GetObject("Link_Profile1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
