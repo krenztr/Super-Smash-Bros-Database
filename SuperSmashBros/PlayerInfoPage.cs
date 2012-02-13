@@ -32,7 +32,8 @@ namespace SuperSmashBros
             this.SizeChanged += new EventHandler(PlayerInfoPage_SizeChanged);
             this.myFriends.CellMouseClick += new DataGridViewCellMouseEventHandler(myFriends_CellMouseClick);
             this.playerFriends.CellMouseClick += new DataGridViewCellMouseEventHandler(playerFriends_CellMouseClick);
- 
+            this.charsBox.Text = "<Select a character>";
+            this.charsBox.Items.Add("<Select a character>");
             this.charsBox.DropDown += new EventHandler(charsBox_DropDown);
 
             this.playerNameLabel.Text = this.username;
@@ -51,7 +52,49 @@ namespace SuperSmashBros
 
         void charsBox_DropDown(object sender, EventArgs e)
         {
-               
+            string connectionString = "user id=CSSE333-201212-SuperSmashBros;" +
+                                       "Password=supersmashbros;" +
+                                       "server=whale.cs.rose-hulman.edu;" +
+                                       "Trusted_Connection=no;" +
+                                       "Database=SuperSmashBros;" +
+                                       "connection timeout=30;" +
+                                       "TrustServerCertificate=true";
+            SqlConnection connection = new SqlConnection(connectionString);
+            SqlCommand command = null;
+            SqlDataReader sdr = null;
+            string cmd = "GetCharacterList";
+
+            try
+            {
+                command = new SqlCommand(cmd, connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Connection = connection;
+                
+                connection.Open();
+                sdr = command.ExecuteReader();
+                charsBox.Items.Clear();
+                charsBox.Items.Add("<Select a character>");
+                while (sdr.Read()) 
+                {
+                    charsBox.Items.Add(sdr[0].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception: " + ex.Message);
+            }
+            finally
+            {
+                if (sdr != null)
+                {
+                    sdr.Close();
+                }
+                if (connection != null)
+                {
+                    connection.Close();
+                    connection.Dispose();
+                }
+            }       
         }
 
         void playerFriends_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -352,7 +395,52 @@ namespace SuperSmashBros
 
         private void changeFavCharButton_Click(object sender, EventArgs e)
         {
-            
+            string character = charsBox.SelectedItem.ToString();
+            if (character.Equals("<Select a character>"))
+                return;
+            else 
+            {
+                string connectionString = "user id=CSSE333-201212-SuperSmashBros;" +
+                                       "Password=supersmashbros;" +
+                                       "server=whale.cs.rose-hulman.edu;" +
+                                       "Trusted_Connection=no;" +
+                                       "Database=SuperSmashBros;" +
+                                       "connection timeout=30;" +
+                                       "TrustServerCertificate=true";
+            SqlConnection connection = new SqlConnection(connectionString);
+            SqlCommand command = null;
+            string cmd = "SetFavoriteCharacter";
+
+            try
+            {
+                command = new SqlCommand(cmd, connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Connection = connection;
+                command.Parameters.Add("@Username", username);
+                command.Parameters.Add("@Password", password);
+                command.Parameters.Add("@Favorite", character);
+                
+                connection.Open();
+                int row = command.ExecuteNonQuery();
+                if (row > 0) 
+                {
+                    updateProfile();
+                    MessageBox.Show("Favorite character updated !");
+                } 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception: " + ex.Message);
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                    connection.Dispose();
+                }
+            }      
+            }
         }
     }
 }

@@ -313,7 +313,7 @@
             // 
             // charsBox
             // 
-            this.charsBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.charsBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.charsBox.FormattingEnabled = true;
             this.charsBox.Location = new System.Drawing.Point(160, 137);
