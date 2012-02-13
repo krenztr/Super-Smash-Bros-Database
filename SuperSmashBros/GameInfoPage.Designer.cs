@@ -88,10 +88,10 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.profileDescription);
             this.panel1.Controls.Add(this.charPicture);
-            this.panel1.Location = new System.Drawing.Point(14, 376);
+            this.panel1.Location = new System.Drawing.Point(14, 408);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(727, 174);
+            this.panel1.Size = new System.Drawing.Size(727, 142);
             this.panel1.TabIndex = 1;
             // 
             // profileDescription
@@ -99,21 +99,24 @@
             this.profileDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.profileDescription.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.profileDescription.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.profileDescription.Font = new System.Drawing.Font("ESSTIXThirteen", 19.8F);
+            this.profileDescription.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.profileDescription.Location = new System.Drawing.Point(158, 3);
             this.profileDescription.Name = "profileDescription";
             this.profileDescription.ReadOnly = true;
-            this.profileDescription.Size = new System.Drawing.Size(556, 164);
+            this.profileDescription.Size = new System.Drawing.Size(556, 128);
             this.profileDescription.TabIndex = 1;
             this.profileDescription.Text = "";
             // 
             // charPicture
             // 
+            this.charPicture.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.charPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.charPicture.Location = new System.Drawing.Point(6, 3);
+            this.charPicture.Location = new System.Drawing.Point(14, 3);
             this.charPicture.Margin = new System.Windows.Forms.Padding(2);
             this.charPicture.Name = "charPicture";
-            this.charPicture.Size = new System.Drawing.Size(141, 164);
+            this.charPicture.Size = new System.Drawing.Size(128, 128);
             this.charPicture.TabIndex = 0;
             this.charPicture.TabStop = false;
             // 
