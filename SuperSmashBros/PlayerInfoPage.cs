@@ -267,6 +267,17 @@ namespace SuperSmashBros
                         this.playerName.Show();
                         this.playerWinsCountLabel.Text = sdr[1].ToString();
                         this.playerLossesCountLabel.Text = sdr[2].ToString();
+
+                        this.friendButton.Text = "Friend This Player";
+                        foreach (DataGridViewRow row in this.myFriends.Rows)
+                        {
+                            if (row.Cells[0].Value.ToString().ToLower().Equals(this.player.ToLower()))
+                            {
+                                this.friendButton.Text = "Unfriend This Player";
+                                break;
+                            }
+                        }
+
                         string playerFavCName = sdr[3].ToString();
                         switch (playerFavCName)
                         {
@@ -349,46 +360,88 @@ namespace SuperSmashBros
         {
             if (player != null)
             {
-                string connectionString = "user id=CSSE333-201212-SuperSmashBros;" +
-                                                       "Password=supersmashbros;" +
-                                                       "server=whale.cs.rose-hulman.edu;" +
-                                                       "Trusted_Connection=no;" +
-                                                       "Database=SuperSmashBros;" +
-                                                       "connection timeout=30;" +
-                                                       "TrustServerCertificate=true";
-                SqlConnection connection = new SqlConnection(connectionString);
-                SqlCommand command = null;
-                string cmd = "AddFriend";
-
-                try
+                if (this.friendButton.Text.Contains("Unfriend"))
                 {
-                    command = new SqlCommand(cmd, connection);
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Connection = connection;
-                    command.Parameters.Add(new SqlParameter("@Username", this.username));
-                    command.Parameters.Add(new SqlParameter("@Password", this.password));
-                    command.Parameters.Add(new SqlParameter("@Friend", this.player));
+                    string connectionString = "user id=CSSE333-201212-SuperSmashBros;" +
+                                                           "Password=supersmashbros;" +
+                                                           "server=whale.cs.rose-hulman.edu;" +
+                                                           "Trusted_Connection=no;" +
+                                                           "Database=SuperSmashBros;" +
+                                                           "connection timeout=30;" +
+                                                           "TrustServerCertificate=true";
+                    SqlConnection connection = new SqlConnection(connectionString);
+                    SqlCommand command = null;
+                    string cmd = "RemoveFriend";
 
-                    connection.Open();
-                    int row = command.ExecuteNonQuery();
-                    if (row > 0)
+                    try
                     {
-                        updateProfile();
-                        MessageBox.Show("Friend added successfully !");
+                        command = new SqlCommand(cmd, connection);
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Connection = connection;
+                        command.Parameters.Add(new SqlParameter("@Username", this.username));
+                        command.Parameters.Add(new SqlParameter("@Password", this.password));
+                        command.Parameters.Add(new SqlParameter("@Friend", this.player));
+
+                        connection.Open();
+                        int row = command.ExecuteNonQuery();
+                        if (row > 0)
+                            updateProfile();
+                        else
+                            MessageBox.Show("Faile to remove user " + player);
                     }
-                    else
-                        MessageBox.Show("Faile to add user " + player);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Exception: " + ex.Message);
-                }
-                finally
-                {
-                    if (connection != null)
+                    catch (Exception ex)
                     {
-                        connection.Close();
-                        connection.Dispose();
+                        MessageBox.Show("Exception: " + ex.Message);
+                    }
+                    finally
+                    {
+                        if (connection != null)
+                        {
+                            connection.Close();
+                            connection.Dispose();
+                        }
+                    }
+                }
+                else
+                {
+                    string connectionString = "user id=CSSE333-201212-SuperSmashBros;" +
+                                                           "Password=supersmashbros;" +
+                                                           "server=whale.cs.rose-hulman.edu;" +
+                                                           "Trusted_Connection=no;" +
+                                                           "Database=SuperSmashBros;" +
+                                                           "connection timeout=30;" +
+                                                           "TrustServerCertificate=true";
+                    SqlConnection connection = new SqlConnection(connectionString);
+                    SqlCommand command = null;
+                    string cmd = "AddFriend";
+
+                    try
+                    {
+                        command = new SqlCommand(cmd, connection);
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Connection = connection;
+                        command.Parameters.Add(new SqlParameter("@Username", this.username));
+                        command.Parameters.Add(new SqlParameter("@Password", this.password));
+                        command.Parameters.Add(new SqlParameter("@Friend", this.player));
+
+                        connection.Open();
+                        int row = command.ExecuteNonQuery();
+                        if (row > 0)
+                            updateProfile();
+                        else
+                            MessageBox.Show("Faile to add user " + player);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Exception: " + ex.Message);
+                    }
+                    finally
+                    {
+                        if (connection != null)
+                        {
+                            connection.Close();
+                            connection.Dispose();
+                        }
                     }
                 }
             }
