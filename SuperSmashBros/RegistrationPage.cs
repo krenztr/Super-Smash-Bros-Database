@@ -87,7 +87,9 @@ namespace SuperSmashBros
 
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Add(new SqlParameter("@pUsername", username));
-                command.Parameters.Add(new SqlParameter("@pPassword", password));
+
+                string hashpasswd = MainPage.GetSHAHash("Richard!" + username + "Trevor@" + password + "Seth#");
+                command.Parameters.Add(new SqlParameter("@pPassword", hashpasswd));
 
 
                 int rows_affected = command.ExecuteNonQuery();

@@ -63,8 +63,10 @@ namespace SuperSmashBros
                 retval.Direction = ParameterDirection.ReturnValue;
                 retval.Value = -1;
 
+                string hashpasswd = MainPage.GetSHAHash("Richard!" + username + "Trevor@" + password + "Seth#");
+
                 command.Parameters.Add(new SqlParameter("@pUsername", username));
-                command.Parameters.Add(new SqlParameter("@pPassword", password));
+                command.Parameters.Add(new SqlParameter("@pPassword", hashpasswd));
                 command.Parameters.Add(retval);
 
                 command.ExecuteNonQuery();
@@ -75,7 +77,7 @@ namespace SuperSmashBros
                 {
                     connection.Close();
                     connection.Dispose();
-                    MainPage main = new MainPage(this, username, password);
+                    MainPage main = new MainPage(this, username, hashpasswd);
                     main.Show();
                     this.Hide();
                 }
