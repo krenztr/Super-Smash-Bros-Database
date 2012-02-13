@@ -234,6 +234,8 @@ namespace SuperSmashBros
                 MessageBox.Show("Enter the name of the player you want to search !");
             else if (!MainPage.IsLetterOrDigit(usernameTextBox.Text))
                 MessageBox.Show("Please don't try to break our database.");
+            else if (username.Equals(this.usernameTextBox.Text))
+                return;
             else
             {
                 string connectionString = "user id=CSSE333-201212-SuperSmashBros;" +

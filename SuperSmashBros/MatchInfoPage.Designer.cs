@@ -39,6 +39,7 @@
             this.playerBLabel = new System.Windows.Forms.Label();
             this.playerNumberLabel = new System.Windows.Forms.Label();
             this.matchDataGrid = new System.Windows.Forms.DataGridView();
+            this.goButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.matchDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             "2 Players",
             "3 Players",
             "4 Players"});
-            this.numPlayersBox.Location = new System.Drawing.Point(347, 64);
+            this.numPlayersBox.Location = new System.Drawing.Point(345, 37);
             this.numPlayersBox.Name = "numPlayersBox";
             this.numPlayersBox.Size = new System.Drawing.Size(121, 24);
             this.numPlayersBox.TabIndex = 0;
@@ -131,7 +132,7 @@
             this.playerNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.playerNumberLabel.AutoSize = true;
-            this.playerNumberLabel.Location = new System.Drawing.Point(344, 30);
+            this.playerNumberLabel.Location = new System.Drawing.Point(342, 17);
             this.playerNumberLabel.Name = "playerNumberLabel";
             this.playerNumberLabel.Size = new System.Drawing.Size(125, 17);
             this.playerNumberLabel.TabIndex = 9;
@@ -139,6 +140,8 @@
             // 
             // matchDataGrid
             // 
+            this.matchDataGrid.AllowUserToAddRows = false;
+            this.matchDataGrid.AllowUserToDeleteRows = false;
             this.matchDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
@@ -149,10 +152,23 @@
             this.matchDataGrid.Size = new System.Drawing.Size(805, 473);
             this.matchDataGrid.TabIndex = 10;
             // 
+            // goButton
+            // 
+            this.goButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.goButton.Location = new System.Drawing.Point(345, 71);
+            this.goButton.Name = "goButton";
+            this.goButton.Size = new System.Drawing.Size(121, 23);
+            this.goButton.TabIndex = 11;
+            this.goButton.Text = "GO !";
+            this.goButton.UseVisualStyleBackColor = true;
+            this.goButton.Click += new System.EventHandler(this.goButton_Click);
+            // 
             // MatchInfoPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.goButton);
             this.Controls.Add(this.matchDataGrid);
             this.Controls.Add(this.playerNumberLabel);
             this.Controls.Add(this.playerDName);
@@ -185,5 +201,6 @@
         private System.Windows.Forms.Label playerBLabel;
         private System.Windows.Forms.Label playerNumberLabel;
         private System.Windows.Forms.DataGridView matchDataGrid;
+        private System.Windows.Forms.Button goButton;
     }
 }
