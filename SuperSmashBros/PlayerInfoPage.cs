@@ -103,7 +103,7 @@ namespace SuperSmashBros
             if (e.Button == System.Windows.Forms.MouseButtons.Left && e.ColumnIndex >= 0 && e.RowIndex >= 0)
             {
                 this.usernameTextBox.Text = this.playerFriends.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-                this.goButton.PerformClick();
+                                this.goButton.PerformClick();
             }
         }
 
@@ -234,7 +234,7 @@ namespace SuperSmashBros
             if (this.usernameTextBox.Text.Equals(""))
                 MessageBox.Show("Enter the name of the player you want to search !");
             else if (!MainPage.IsLetterOrDigit(usernameTextBox.Text))
-                MessageBox.Show("Please don't try to break our database.");
+                MessageBox.Show("Restrict your input to letters and numbers.  Or else.");
             else if (username.Equals(this.usernameTextBox.Text))
                 return;
             else
@@ -430,7 +430,7 @@ namespace SuperSmashBros
                         if (row > 0)
                             updateProfile();
                         else
-                            MessageBox.Show("Faile to add user " + player);
+                            MessageBox.Show("Failed to add user " + player);
                     }
                     catch (Exception ex)
                     {

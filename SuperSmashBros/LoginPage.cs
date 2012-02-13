@@ -34,6 +34,13 @@ namespace SuperSmashBros
         {
             string username = usernameBox.Text;
             string password = passwordBox.Text;
+            string temp = username + password;
+
+            if (!MainPage.IsLetterOrDigit(temp))
+            {
+                MessageBox.Show("Restrict your input to letters and numbers.  Or else.");
+                return;
+            }
 
             string connectionString = "user id=CSSE333-201212-SuperSmashBros;" +
                                        "Password=supersmashbros;" +
@@ -42,7 +49,6 @@ namespace SuperSmashBros
                                        "Database=SuperSmashBros;" +
                                        "connection timeout=30;" +
                                        "TrustServerCertificate=true";
-
 
             SqlConnection connection = null;
             SqlDataReader sdr = null;
@@ -67,6 +73,7 @@ namespace SuperSmashBros
 
                 command.Parameters.Add(new SqlParameter("@pUsername", username));
                 command.Parameters.Add(new SqlParameter("@pPassword", hashpasswd));
+
                 command.Parameters.Add(retval);
 
                 command.ExecuteNonQuery();

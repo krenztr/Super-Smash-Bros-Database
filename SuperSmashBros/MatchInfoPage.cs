@@ -53,14 +53,14 @@ namespace SuperSmashBros
         private void goButton_Click(object sender, EventArgs e)
         {
             int numOfPlayer = numPlayersBox.SelectedIndex + 1;
-            
-             string connectionString = "user id=CSSE333-201212-SuperSmashBros;" +
-                                       "Password=supersmashbros;" +
-                                       "server=whale.cs.rose-hulman.edu;" +
-                                       "Trusted_Connection=no;" +
-                                       "Database=SuperSmashBros;" +
-                                       "connection timeout=30;" +
-                                       "TrustServerCertificate=true";
+
+            string connectionString = "user id=CSSE333-201212-SuperSmashBros;" +
+                                      "Password=supersmashbros;" +
+                                      "server=whale.cs.rose-hulman.edu;" +
+                                      "Trusted_Connection=no;" +
+                                      "Database=SuperSmashBros;" +
+                                      "connection timeout=30;" +
+                                      "TrustServerCertificate=true";
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = null;
             SqlDataReader sdr = null;
@@ -77,21 +77,41 @@ namespace SuperSmashBros
                     case 4:
                         if (playerDName.TextLength < 1)
                             MessageBox.Show("Enter a username for player D.");
+                        if (!MainPage.IsLetterOrDigit(playerDName.Text))
+                        {
+                            MessageBox.Show("Restrict your input to letters and numbers.  Or else.");
+                            return;
+                        }
                         command.Parameters.Add(new SqlParameter("@Username4", playerDName.Text));
                         goto case 3;
                     case 3:
                         if (playerCName.TextLength < 1)
                             MessageBox.Show("Enter a username for player C.");
+                        if (!MainPage.IsLetterOrDigit(playerCName.Text))
+                        {
+                            MessageBox.Show("Restrict your input to letters and numbers.  Or else.");
+                            return;
+                        }
                         command.Parameters.Add(new SqlParameter("@Username3", playerCName.Text));
                         goto case 2;
                     case 2:
                         if (playerBName.TextLength < 1)
                             MessageBox.Show("Enter a username for player B.");
+                        if (!MainPage.IsLetterOrDigit(playerBName.Text))
+                        {
+                            MessageBox.Show("Restrict your input to letters and numbers.  Or else.");
+                            return;
+                        }
                         command.Parameters.Add(new SqlParameter("@Username2", playerBName.Text));
                         goto case 1;
                     case 1:
                         if (playerAName.TextLength < 1)
                             MessageBox.Show("Enter a username for player A.");
+                        if (!MainPage.IsLetterOrDigit(playerAName.Text))
+                        {
+                            MessageBox.Show("Restrict your input to letters and numbers.  Or else.");
+                            return;
+                        }
                         command.Parameters.Add(new SqlParameter("@Username1", playerAName.Text));
                         break;
 
@@ -119,7 +139,7 @@ namespace SuperSmashBros
                     matchDataGrid.Columns.Add("playerD", "Player D");
                 }
                 matchDataGrid.Rows.Clear();
-                while (sdr.Read()) 
+                while (sdr.Read())
                 {
                     matchDataGrid.Rows.Add();
                     // Type
@@ -158,7 +178,7 @@ namespace SuperSmashBros
                     connection.Close();
                     connection.Dispose();
                 }
-            }       
+            }
         }
     }
 }

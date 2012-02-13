@@ -73,6 +73,7 @@
             this.usernameBox.BackColor = System.Drawing.SystemColors.Info;
             this.usernameBox.Location = new System.Drawing.Point(487, 398);
             this.usernameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 4);
+            this.usernameBox.MaxLength = 15;
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(98, 20);
             this.usernameBox.TabIndex = 1;

@@ -54,7 +54,7 @@
             "3 Players",
             "4 Players"});
             this.numPlayersBox.Location = new System.Drawing.Point(259, 30);
-            this.numPlayersBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numPlayersBox.Margin = new System.Windows.Forms.Padding(2);
             this.numPlayersBox.Name = "numPlayersBox";
             this.numPlayersBox.Size = new System.Drawing.Size(240, 21);
             this.numPlayersBox.TabIndex = 0;
@@ -74,7 +74,8 @@
             // playerAName
             // 
             this.playerAName.Location = new System.Drawing.Point(92, 20);
-            this.playerAName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.playerAName.Margin = new System.Windows.Forms.Padding(2);
+            this.playerAName.MaxLength = 15;
             this.playerAName.Name = "playerAName";
             this.playerAName.Size = new System.Drawing.Size(74, 20);
             this.playerAName.TabIndex = 2;
@@ -82,7 +83,8 @@
             // playerCName
             // 
             this.playerCName.Location = new System.Drawing.Point(92, 58);
-            this.playerCName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.playerCName.Margin = new System.Windows.Forms.Padding(2);
+            this.playerCName.MaxLength = 15;
             this.playerCName.Name = "playerCName";
             this.playerCName.Size = new System.Drawing.Size(74, 20);
             this.playerCName.TabIndex = 4;
@@ -102,7 +104,8 @@
             // 
             this.playerDName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.playerDName.Location = new System.Drawing.Point(627, 58);
-            this.playerDName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.playerDName.Margin = new System.Windows.Forms.Padding(2);
+            this.playerDName.MaxLength = 15;
             this.playerDName.Name = "playerDName";
             this.playerDName.Size = new System.Drawing.Size(74, 20);
             this.playerDName.TabIndex = 8;
@@ -123,7 +126,8 @@
             // 
             this.playerBName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.playerBName.Location = new System.Drawing.Point(627, 20);
-            this.playerBName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.playerBName.Margin = new System.Windows.Forms.Padding(2);
+            this.playerBName.MaxLength = 15;
             this.playerBName.Name = "playerBName";
             this.playerBName.Size = new System.Drawing.Size(74, 20);
             this.playerBName.TabIndex = 6;
@@ -162,7 +166,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.matchDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.matchDataGrid.Location = new System.Drawing.Point(2, 94);
-            this.matchDataGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.matchDataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.matchDataGrid.Name = "matchDataGrid";
             this.matchDataGrid.RowTemplate.Height = 24;
             this.matchDataGrid.Size = new System.Drawing.Size(752, 472);
@@ -173,7 +177,7 @@
             this.goButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.goButton.Location = new System.Drawing.Point(259, 58);
-            this.goButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.goButton.Margin = new System.Windows.Forms.Padding(2);
             this.goButton.Name = "goButton";
             this.goButton.Size = new System.Drawing.Size(239, 32);
             this.goButton.TabIndex = 11;
@@ -198,7 +202,7 @@
             this.Controls.Add(this.playerAName);
             this.Controls.Add(this.playerALabel);
             this.Controls.Add(this.numPlayersBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(756, 569);
             this.Name = "MatchInfoPage";
             this.Size = new System.Drawing.Size(756, 569);
