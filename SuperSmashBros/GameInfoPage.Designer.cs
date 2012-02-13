@@ -158,7 +158,7 @@
             this.lylatCruiseBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.lylatCruiseBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lylatCruiseBox.Image = global::SuperSmashBros.Properties.Resources.Lylat_Cruise;
-            this.lylatCruiseBox.Location = new System.Drawing.Point(342, 321);
+            this.lylatCruiseBox.Location = new System.Drawing.Point(539, 539);
             this.lylatCruiseBox.Name = "lylatCruiseBox";
             this.lylatCruiseBox.Size = new System.Drawing.Size(128, 128);
             this.lylatCruiseBox.TabIndex = 23;
@@ -170,7 +170,7 @@
             this.fountainOfDreamsBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.fountainOfDreamsBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fountainOfDreamsBox.Image = global::SuperSmashBros.Properties.Resources.Fountain_of_Dreams;
-            this.fountainOfDreamsBox.Location = new System.Drawing.Point(229, 321);
+            this.fountainOfDreamsBox.Location = new System.Drawing.Point(405, 539);
             this.fountainOfDreamsBox.Name = "fountainOfDreamsBox";
             this.fountainOfDreamsBox.Size = new System.Drawing.Size(128, 128);
             this.fountainOfDreamsBox.TabIndex = 22;
@@ -182,7 +182,7 @@
             this.mushroomyKingdomBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.mushroomyKingdomBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mushroomyKingdomBox.Image = global::SuperSmashBros.Properties.Resources.Mushroomy_Kingdom;
-            this.mushroomyKingdomBox.Location = new System.Drawing.Point(116, 321);
+            this.mushroomyKingdomBox.Location = new System.Drawing.Point(271, 539);
             this.mushroomyKingdomBox.Name = "mushroomyKingdomBox";
             this.mushroomyKingdomBox.Size = new System.Drawing.Size(128, 128);
             this.mushroomyKingdomBox.TabIndex = 21;
@@ -194,7 +194,7 @@
             this.marioCircuitBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.marioCircuitBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.marioCircuitBox.Image = global::SuperSmashBros.Properties.Resources.Mario_Circut;
-            this.marioCircuitBox.Location = new System.Drawing.Point(3, 321);
+            this.marioCircuitBox.Location = new System.Drawing.Point(137, 539);
             this.marioCircuitBox.Name = "marioCircuitBox";
             this.marioCircuitBox.Size = new System.Drawing.Size(128, 128);
             this.marioCircuitBox.TabIndex = 20;
@@ -206,7 +206,7 @@
             this.castleSiegeBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.castleSiegeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.castleSiegeBox.Image = global::SuperSmashBros.Properties.Resources.Castle_Siege;
-            this.castleSiegeBox.Location = new System.Drawing.Point(568, 215);
+            this.castleSiegeBox.Location = new System.Drawing.Point(3, 539);
             this.castleSiegeBox.Name = "castleSiegeBox";
             this.castleSiegeBox.Size = new System.Drawing.Size(128, 128);
             this.castleSiegeBox.TabIndex = 19;
@@ -218,7 +218,7 @@
             this.hyruleTempleBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.hyruleTempleBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hyruleTempleBox.Image = global::SuperSmashBros.Properties.Resources.Hyrule_Temple;
-            this.hyruleTempleBox.Location = new System.Drawing.Point(455, 215);
+            this.hyruleTempleBox.Location = new System.Drawing.Point(539, 405);
             this.hyruleTempleBox.Name = "hyruleTempleBox";
             this.hyruleTempleBox.Size = new System.Drawing.Size(128, 128);
             this.hyruleTempleBox.TabIndex = 18;
@@ -230,7 +230,7 @@
             this.luigisMansionBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.luigisMansionBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.luigisMansionBox.Image = global::SuperSmashBros.Properties.Resources.Luigis_Mansion;
-            this.luigisMansionBox.Location = new System.Drawing.Point(342, 215);
+            this.luigisMansionBox.Location = new System.Drawing.Point(405, 405);
             this.luigisMansionBox.Name = "luigisMansionBox";
             this.luigisMansionBox.Size = new System.Drawing.Size(128, 128);
             this.luigisMansionBox.TabIndex = 17;
@@ -242,7 +242,7 @@
             this.pirateShipBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pirateShipBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pirateShipBox.Image = global::SuperSmashBros.Properties.Resources.Pirate_Ship;
-            this.pirateShipBox.Location = new System.Drawing.Point(229, 215);
+            this.pirateShipBox.Location = new System.Drawing.Point(271, 405);
             this.pirateShipBox.Name = "pirateShipBox";
             this.pirateShipBox.Size = new System.Drawing.Size(128, 128);
             this.pirateShipBox.TabIndex = 16;
@@ -254,7 +254,7 @@
             this.battlefieldBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.battlefieldBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.battlefieldBox.Image = global::SuperSmashBros.Properties.Resources.Battlefield;
-            this.battlefieldBox.Location = new System.Drawing.Point(116, 215);
+            this.battlefieldBox.Location = new System.Drawing.Point(137, 405);
             this.battlefieldBox.Name = "battlefieldBox";
             this.battlefieldBox.Size = new System.Drawing.Size(128, 128);
             this.battlefieldBox.TabIndex = 15;
@@ -266,7 +266,7 @@
             this.finalDestinationBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.finalDestinationBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.finalDestinationBox.Image = global::SuperSmashBros.Properties.Resources.Final_Destination;
-            this.finalDestinationBox.Location = new System.Drawing.Point(3, 215);
+            this.finalDestinationBox.Location = new System.Drawing.Point(3, 405);
             this.finalDestinationBox.Name = "finalDestinationBox";
             this.finalDestinationBox.Size = new System.Drawing.Size(128, 128);
             this.finalDestinationBox.TabIndex = 14;
@@ -278,7 +278,7 @@
             this.kirbyBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.kirbyBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.kirbyBox.Image = global::SuperSmashBros.Properties.Resources.Kirby;
-            this.kirbyBox.Location = new System.Drawing.Point(568, 109);
+            this.kirbyBox.Location = new System.Drawing.Point(3, 271);
             this.kirbyBox.Name = "kirbyBox";
             this.kirbyBox.Size = new System.Drawing.Size(128, 128);
             this.kirbyBox.TabIndex = 13;
@@ -290,7 +290,7 @@
             this.jigglypuffBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.jigglypuffBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.jigglypuffBox.Image = global::SuperSmashBros.Properties.Resources.Jigglypuff;
-            this.jigglypuffBox.Location = new System.Drawing.Point(455, 109);
+            this.jigglypuffBox.Location = new System.Drawing.Point(137, 271);
             this.jigglypuffBox.Name = "jigglypuffBox";
             this.jigglypuffBox.Size = new System.Drawing.Size(128, 128);
             this.jigglypuffBox.TabIndex = 12;
@@ -302,7 +302,7 @@
             this.pikachuBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pikachuBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pikachuBox.Image = global::SuperSmashBros.Properties.Resources.Pikachu;
-            this.pikachuBox.Location = new System.Drawing.Point(342, 109);
+            this.pikachuBox.Location = new System.Drawing.Point(539, 137);
             this.pikachuBox.Name = "pikachuBox";
             this.pikachuBox.Size = new System.Drawing.Size(128, 128);
             this.pikachuBox.TabIndex = 11;
@@ -314,7 +314,7 @@
             this.marthBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.marthBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.marthBox.Image = global::SuperSmashBros.Properties.Resources.Marth;
-            this.marthBox.Location = new System.Drawing.Point(229, 109);
+            this.marthBox.Location = new System.Drawing.Point(405, 137);
             this.marthBox.Name = "marthBox";
             this.marthBox.Size = new System.Drawing.Size(128, 128);
             this.marthBox.TabIndex = 10;
@@ -326,7 +326,7 @@
             this.captainFalconBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.captainFalconBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.captainFalconBox.Image = global::SuperSmashBros.Properties.Resources.Captain_Falcon;
-            this.captainFalconBox.Location = new System.Drawing.Point(116, 109);
+            this.captainFalconBox.Location = new System.Drawing.Point(271, 137);
             this.captainFalconBox.Name = "captainFalconBox";
             this.captainFalconBox.Size = new System.Drawing.Size(128, 128);
             this.captainFalconBox.TabIndex = 9;
@@ -338,7 +338,7 @@
             this.bowserBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bowserBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bowserBox.Image = global::SuperSmashBros.Properties.Resources.Bowser;
-            this.bowserBox.Location = new System.Drawing.Point(3, 109);
+            this.bowserBox.Location = new System.Drawing.Point(137, 137);
             this.bowserBox.Name = "bowserBox";
             this.bowserBox.Size = new System.Drawing.Size(128, 128);
             this.bowserBox.TabIndex = 8;
@@ -350,7 +350,7 @@
             this.samusBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.samusBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.samusBox.Image = global::SuperSmashBros.Properties.Resources.Samus1;
-            this.samusBox.Location = new System.Drawing.Point(568, 3);
+            this.samusBox.Location = new System.Drawing.Point(3, 137);
             this.samusBox.Name = "samusBox";
             this.samusBox.Size = new System.Drawing.Size(128, 128);
             this.samusBox.TabIndex = 7;
@@ -362,7 +362,7 @@
             this.olimarBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.olimarBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.olimarBox.Image = global::SuperSmashBros.Properties.Resources.Olimar;
-            this.olimarBox.Location = new System.Drawing.Point(455, 3);
+            this.olimarBox.Location = new System.Drawing.Point(539, 3);
             this.olimarBox.Name = "olimarBox";
             this.olimarBox.Size = new System.Drawing.Size(128, 128);
             this.olimarBox.TabIndex = 6;
@@ -374,7 +374,7 @@
             this.foxBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.foxBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.foxBox.Image = global::SuperSmashBros.Properties.Resources.Fox;
-            this.foxBox.Location = new System.Drawing.Point(342, 3);
+            this.foxBox.Location = new System.Drawing.Point(405, 3);
             this.foxBox.Name = "foxBox";
             this.foxBox.Size = new System.Drawing.Size(128, 128);
             this.foxBox.TabIndex = 5;
@@ -386,7 +386,7 @@
             this.luigiBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.luigiBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.luigiBox.Image = global::SuperSmashBros.Properties.Resources.Luigi;
-            this.luigiBox.Location = new System.Drawing.Point(229, 3);
+            this.luigiBox.Location = new System.Drawing.Point(271, 3);
             this.luigiBox.Name = "luigiBox";
             this.luigiBox.Size = new System.Drawing.Size(128, 128);
             this.luigiBox.TabIndex = 4;
@@ -398,7 +398,7 @@
             this.marioBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.marioBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.marioBox.Image = global::SuperSmashBros.Properties.Resources.Mario;
-            this.marioBox.Location = new System.Drawing.Point(116, 3);
+            this.marioBox.Location = new System.Drawing.Point(137, 3);
             this.marioBox.Name = "marioBox";
             this.marioBox.Size = new System.Drawing.Size(128, 128);
             this.marioBox.TabIndex = 3;
