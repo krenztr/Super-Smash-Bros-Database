@@ -45,96 +45,111 @@
             // 
             // numPlayersBox
             // 
-            this.numPlayersBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.numPlayersBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.numPlayersBox.FormattingEnabled = true;
             this.numPlayersBox.Items.AddRange(new object[] {
             "1 Player",
             "2 Players",
             "3 Players",
             "4 Players"});
-            this.numPlayersBox.Location = new System.Drawing.Point(345, 37);
+            this.numPlayersBox.Location = new System.Drawing.Point(259, 30);
+            this.numPlayersBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numPlayersBox.Name = "numPlayersBox";
-            this.numPlayersBox.Size = new System.Drawing.Size(121, 24);
+            this.numPlayersBox.Size = new System.Drawing.Size(240, 21);
             this.numPlayersBox.TabIndex = 0;
             this.numPlayersBox.SelectedIndexChanged += new System.EventHandler(this.numPlayersBox_SelectedIndexChanged);
             // 
             // playerALabel
             // 
             this.playerALabel.AutoSize = true;
-            this.playerALabel.Location = new System.Drawing.Point(51, 25);
+            this.playerALabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.playerALabel.Location = new System.Drawing.Point(38, 20);
+            this.playerALabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerALabel.Name = "playerALabel";
-            this.playerALabel.Size = new System.Drawing.Size(65, 17);
+            this.playerALabel.Size = new System.Drawing.Size(49, 13);
             this.playerALabel.TabIndex = 1;
             this.playerALabel.Text = "Player A:";
             // 
             // playerAName
             // 
-            this.playerAName.Location = new System.Drawing.Point(122, 25);
+            this.playerAName.Location = new System.Drawing.Point(92, 20);
+            this.playerAName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.playerAName.Name = "playerAName";
-            this.playerAName.Size = new System.Drawing.Size(98, 22);
+            this.playerAName.Size = new System.Drawing.Size(74, 20);
             this.playerAName.TabIndex = 2;
             // 
             // playerCName
             // 
-            this.playerCName.Location = new System.Drawing.Point(122, 71);
+            this.playerCName.Location = new System.Drawing.Point(92, 58);
+            this.playerCName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.playerCName.Name = "playerCName";
-            this.playerCName.Size = new System.Drawing.Size(98, 22);
+            this.playerCName.Size = new System.Drawing.Size(74, 20);
             this.playerCName.TabIndex = 4;
             // 
             // playerCLabel
             // 
             this.playerCLabel.AutoSize = true;
-            this.playerCLabel.Location = new System.Drawing.Point(51, 71);
+            this.playerCLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.playerCLabel.Location = new System.Drawing.Point(38, 58);
+            this.playerCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerCLabel.Name = "playerCLabel";
-            this.playerCLabel.Size = new System.Drawing.Size(65, 17);
+            this.playerCLabel.Size = new System.Drawing.Size(49, 13);
             this.playerCLabel.TabIndex = 3;
             this.playerCLabel.Text = "Player C:";
             // 
             // playerDName
             // 
             this.playerDName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.playerDName.Location = new System.Drawing.Point(639, 71);
+            this.playerDName.Location = new System.Drawing.Point(627, 58);
+            this.playerDName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.playerDName.Name = "playerDName";
-            this.playerDName.Size = new System.Drawing.Size(98, 22);
+            this.playerDName.Size = new System.Drawing.Size(74, 20);
             this.playerDName.TabIndex = 8;
             // 
             // playerDLabel
             // 
             this.playerDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.playerDLabel.AutoSize = true;
-            this.playerDLabel.Location = new System.Drawing.Point(568, 71);
+            this.playerDLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.playerDLabel.Location = new System.Drawing.Point(574, 58);
+            this.playerDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerDLabel.Name = "playerDLabel";
-            this.playerDLabel.Size = new System.Drawing.Size(66, 17);
+            this.playerDLabel.Size = new System.Drawing.Size(50, 13);
             this.playerDLabel.TabIndex = 7;
             this.playerDLabel.Text = "Player D:";
             // 
             // playerBName
             // 
             this.playerBName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.playerBName.Location = new System.Drawing.Point(639, 25);
+            this.playerBName.Location = new System.Drawing.Point(627, 20);
+            this.playerBName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.playerBName.Name = "playerBName";
-            this.playerBName.Size = new System.Drawing.Size(98, 22);
+            this.playerBName.Size = new System.Drawing.Size(74, 20);
             this.playerBName.TabIndex = 6;
             // 
             // playerBLabel
             // 
             this.playerBLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.playerBLabel.AutoSize = true;
-            this.playerBLabel.Location = new System.Drawing.Point(568, 25);
+            this.playerBLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.playerBLabel.Location = new System.Drawing.Point(574, 20);
+            this.playerBLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerBLabel.Name = "playerBLabel";
-            this.playerBLabel.Size = new System.Drawing.Size(65, 17);
+            this.playerBLabel.Size = new System.Drawing.Size(49, 13);
             this.playerBLabel.TabIndex = 5;
             this.playerBLabel.Text = "Player B:";
             // 
             // playerNumberLabel
             // 
-            this.playerNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.playerNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.playerNumberLabel.AutoSize = true;
-            this.playerNumberLabel.Location = new System.Drawing.Point(342, 17);
+            this.playerNumberLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.playerNumberLabel.Location = new System.Drawing.Point(256, 14);
+            this.playerNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerNumberLabel.Name = "playerNumberLabel";
-            this.playerNumberLabel.Size = new System.Drawing.Size(125, 17);
+            this.playerNumberLabel.Size = new System.Drawing.Size(93, 13);
             this.playerNumberLabel.TabIndex = 9;
             this.playerNumberLabel.Text = "Number of Players";
             // 
@@ -142,23 +157,25 @@
             // 
             this.matchDataGrid.AllowUserToAddRows = false;
             this.matchDataGrid.AllowUserToDeleteRows = false;
-            this.matchDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.matchDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.matchDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.matchDataGrid.Location = new System.Drawing.Point(3, 116);
+            this.matchDataGrid.Location = new System.Drawing.Point(2, 94);
+            this.matchDataGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.matchDataGrid.Name = "matchDataGrid";
             this.matchDataGrid.RowTemplate.Height = 24;
-            this.matchDataGrid.Size = new System.Drawing.Size(805, 473);
+            this.matchDataGrid.Size = new System.Drawing.Size(752, 472);
             this.matchDataGrid.TabIndex = 10;
             // 
             // goButton
             // 
-            this.goButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.goButton.Location = new System.Drawing.Point(345, 71);
+            this.goButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.goButton.Location = new System.Drawing.Point(259, 58);
+            this.goButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.goButton.Name = "goButton";
-            this.goButton.Size = new System.Drawing.Size(121, 23);
+            this.goButton.Size = new System.Drawing.Size(239, 32);
             this.goButton.TabIndex = 11;
             this.goButton.Text = "GO !";
             this.goButton.UseVisualStyleBackColor = true;
@@ -166,8 +183,9 @@
             // 
             // MatchInfoPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GrayText;
             this.Controls.Add(this.goButton);
             this.Controls.Add(this.matchDataGrid);
             this.Controls.Add(this.playerNumberLabel);
@@ -180,8 +198,10 @@
             this.Controls.Add(this.playerAName);
             this.Controls.Add(this.playerALabel);
             this.Controls.Add(this.numPlayersBox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(756, 569);
             this.Name = "MatchInfoPage";
-            this.Size = new System.Drawing.Size(811, 592);
+            this.Size = new System.Drawing.Size(756, 569);
             ((System.ComponentModel.ISupportInitialize)(this.matchDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

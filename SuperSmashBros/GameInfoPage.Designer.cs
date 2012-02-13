@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.profileDescription = new System.Windows.Forms.RichTextBox();
             this.charPicture = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.gamePanel = new System.Windows.Forms.Panel();
             this.lylatCruiseBox = new System.Windows.Forms.PictureBox();
             this.fountainOfDreamsBox = new System.Windows.Forms.PictureBox();
             this.mushroomyKingdomBox = new System.Windows.Forms.PictureBox();
@@ -56,7 +56,7 @@
             this.linkBox = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.charPicture)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.gamePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lylatCruiseBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fountainOfDreamsBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mushroomyKingdomBox)).BeginInit();
@@ -85,6 +85,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.profileDescription);
             this.panel1.Controls.Add(this.charPicture);
@@ -100,7 +101,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.profileDescription.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.profileDescription.Font = new System.Drawing.Font("ESSTIXThirteen", 19.8F);
+            this.profileDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.profileDescription.Cursor = System.Windows.Forms.Cursors.Default;
+            this.profileDescription.Font = new System.Drawing.Font("Byington", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profileDescription.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.profileDescription.Location = new System.Drawing.Point(158, 3);
             this.profileDescription.Name = "profileDescription";
@@ -120,41 +123,41 @@
             this.charPicture.TabIndex = 0;
             this.charPicture.TabStop = false;
             // 
-            // panel2
+            // gamePanel
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gamePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.lylatCruiseBox);
-            this.panel2.Controls.Add(this.fountainOfDreamsBox);
-            this.panel2.Controls.Add(this.mushroomyKingdomBox);
-            this.panel2.Controls.Add(this.marioCircuitBox);
-            this.panel2.Controls.Add(this.castleSiegeBox);
-            this.panel2.Controls.Add(this.hyruleTempleBox);
-            this.panel2.Controls.Add(this.luigisMansionBox);
-            this.panel2.Controls.Add(this.pirateShipBox);
-            this.panel2.Controls.Add(this.battlefieldBox);
-            this.panel2.Controls.Add(this.finalDestinationBox);
-            this.panel2.Controls.Add(this.kirbyBox);
-            this.panel2.Controls.Add(this.jigglypuffBox);
-            this.panel2.Controls.Add(this.pikachuBox);
-            this.panel2.Controls.Add(this.marthBox);
-            this.panel2.Controls.Add(this.captainFalconBox);
-            this.panel2.Controls.Add(this.bowserBox);
-            this.panel2.Controls.Add(this.samusBox);
-            this.panel2.Controls.Add(this.olimarBox);
-            this.panel2.Controls.Add(this.foxBox);
-            this.panel2.Controls.Add(this.luigiBox);
-            this.panel2.Controls.Add(this.marioBox);
-            this.panel2.Controls.Add(this.linkBox);
-            this.panel2.Location = new System.Drawing.Point(14, 16);
-            this.panel2.MinimumSize = new System.Drawing.Size(545, 286);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(727, 343);
-            this.panel2.TabIndex = 3;
+            this.gamePanel.AutoScroll = true;
+            this.gamePanel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.gamePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gamePanel.Controls.Add(this.lylatCruiseBox);
+            this.gamePanel.Controls.Add(this.fountainOfDreamsBox);
+            this.gamePanel.Controls.Add(this.mushroomyKingdomBox);
+            this.gamePanel.Controls.Add(this.marioCircuitBox);
+            this.gamePanel.Controls.Add(this.castleSiegeBox);
+            this.gamePanel.Controls.Add(this.hyruleTempleBox);
+            this.gamePanel.Controls.Add(this.luigisMansionBox);
+            this.gamePanel.Controls.Add(this.pirateShipBox);
+            this.gamePanel.Controls.Add(this.battlefieldBox);
+            this.gamePanel.Controls.Add(this.finalDestinationBox);
+            this.gamePanel.Controls.Add(this.kirbyBox);
+            this.gamePanel.Controls.Add(this.jigglypuffBox);
+            this.gamePanel.Controls.Add(this.pikachuBox);
+            this.gamePanel.Controls.Add(this.marthBox);
+            this.gamePanel.Controls.Add(this.captainFalconBox);
+            this.gamePanel.Controls.Add(this.bowserBox);
+            this.gamePanel.Controls.Add(this.samusBox);
+            this.gamePanel.Controls.Add(this.olimarBox);
+            this.gamePanel.Controls.Add(this.foxBox);
+            this.gamePanel.Controls.Add(this.luigiBox);
+            this.gamePanel.Controls.Add(this.marioBox);
+            this.gamePanel.Controls.Add(this.linkBox);
+            this.gamePanel.Location = new System.Drawing.Point(14, 16);
+            this.gamePanel.MinimumSize = new System.Drawing.Size(545, 286);
+            this.gamePanel.Name = "gamePanel";
+            this.gamePanel.Size = new System.Drawing.Size(727, 343);
+            this.gamePanel.TabIndex = 3;
             // 
             // lylatCruiseBox
             // 
@@ -424,7 +427,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel2);
+            this.BackColor = System.Drawing.SystemColors.GrayText;
+            this.Controls.Add(this.gamePanel);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(756, 569);
@@ -433,7 +437,7 @@
             this.Load += new System.EventHandler(this.GameInfoPage_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.charPicture)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.gamePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lylatCruiseBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fountainOfDreamsBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mushroomyKingdomBox)).EndInit();
@@ -466,7 +470,7 @@
         private System.Windows.Forms.PictureBox charPicture;
         private System.Windows.Forms.PictureBox linkBox;
         private System.Windows.Forms.RichTextBox profileDescription;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel gamePanel;
         private System.Windows.Forms.PictureBox marioBox;
         private System.Windows.Forms.PictureBox luigiBox;
         private System.Windows.Forms.PictureBox foxBox;

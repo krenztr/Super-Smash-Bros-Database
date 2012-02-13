@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.splitPanels = new System.Windows.Forms.SplitContainer();
+            this.charsBox = new System.Windows.Forms.ComboBox();
             this.myFriends = new System.Windows.Forms.DataGridView();
             this.myAvatar = new System.Windows.Forms.PictureBox();
             this.myLossesCount = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.searchUserLabel = new System.Windows.Forms.Label();
             this.playerAvatar = new System.Windows.Forms.PictureBox();
-            this.charsBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitPanels)).BeginInit();
             this.splitPanels.Panel1.SuspendLayout();
             this.splitPanels.Panel2.SuspendLayout();
@@ -62,15 +62,17 @@
             // 
             // splitPanels
             // 
-            this.splitPanels.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitPanels.Location = new System.Drawing.Point(3, 3);
-            this.splitPanels.MinimumSize = new System.Drawing.Size(805, 586);
+            this.splitPanels.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitPanels.Location = new System.Drawing.Point(2, 2);
+            this.splitPanels.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitPanels.MinimumSize = new System.Drawing.Size(604, 476);
             this.splitPanels.Name = "splitPanels";
             // 
             // splitPanels.Panel1
             // 
+            this.splitPanels.Panel1.BackColor = System.Drawing.SystemColors.GrayText;
             this.splitPanels.Panel1.Controls.Add(this.charsBox);
             this.splitPanels.Panel1.Controls.Add(this.myFriends);
             this.splitPanels.Panel1.Controls.Add(this.myAvatar);
@@ -84,6 +86,7 @@
             // 
             // splitPanels.Panel2
             // 
+            this.splitPanels.Panel2.BackColor = System.Drawing.SystemColors.GrayText;
             this.splitPanels.Panel2.Controls.Add(this.playerName);
             this.splitPanels.Panel2.Controls.Add(this.playerFriends);
             this.splitPanels.Panel2.Controls.Add(this.playerLossesCountLabel);
@@ -95,83 +98,106 @@
             this.splitPanels.Panel2.Controls.Add(this.usernameTextBox);
             this.splitPanels.Panel2.Controls.Add(this.searchUserLabel);
             this.splitPanels.Panel2.Controls.Add(this.playerAvatar);
-            this.splitPanels.Size = new System.Drawing.Size(805, 586);
-            this.splitPanels.SplitterDistance = 399;
+            this.splitPanels.Size = new System.Drawing.Size(604, 476);
+            this.splitPanels.SplitterDistance = 299;
+            this.splitPanels.SplitterWidth = 3;
             this.splitPanels.TabIndex = 0;
+            // 
+            // charsBox
+            // 
+            this.charsBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.charsBox.FormattingEnabled = true;
+            this.charsBox.Location = new System.Drawing.Point(150, 92);
+            this.charsBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.charsBox.Name = "charsBox";
+            this.charsBox.Size = new System.Drawing.Size(132, 21);
+            this.charsBox.TabIndex = 10;
             // 
             // myFriends
             // 
             this.myFriends.AllowUserToAddRows = false;
             this.myFriends.AllowUserToDeleteRows = false;
-            this.myFriends.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.myFriends.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.myFriends.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.myFriends.Location = new System.Drawing.Point(24, 210);
+            this.myFriends.Location = new System.Drawing.Point(18, 191);
+            this.myFriends.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.myFriends.Name = "myFriends";
             this.myFriends.RowTemplate.Height = 24;
-            this.myFriends.Size = new System.Drawing.Size(352, 348);
+            this.myFriends.Size = new System.Drawing.Size(264, 273);
             this.myFriends.TabIndex = 9;
             // 
             // myAvatar
             // 
-            this.myAvatar.Location = new System.Drawing.Point(24, 74);
+            this.myAvatar.Location = new System.Drawing.Point(18, 60);
+            this.myAvatar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.myAvatar.Name = "myAvatar";
-            this.myAvatar.Size = new System.Drawing.Size(120, 120);
+            this.myAvatar.Size = new System.Drawing.Size(128, 128);
             this.myAvatar.TabIndex = 0;
             this.myAvatar.TabStop = false;
             // 
             // myLossesCount
             // 
-            this.myLossesCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.myLossesCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.myLossesCount.AutoSize = true;
-            this.myLossesCount.Location = new System.Drawing.Point(301, 76);
+            this.myLossesCount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.myLossesCount.Location = new System.Drawing.Point(226, 62);
+            this.myLossesCount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.myLossesCount.Name = "myLossesCount";
-            this.myLossesCount.Size = new System.Drawing.Size(16, 17);
+            this.myLossesCount.Size = new System.Drawing.Size(13, 13);
             this.myLossesCount.TabIndex = 8;
             this.myLossesCount.Text = "0";
             // 
             // myWinsCount
             // 
-            this.myWinsCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.myWinsCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.myWinsCount.AutoSize = true;
-            this.myWinsCount.Location = new System.Drawing.Point(298, 31);
+            this.myWinsCount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.myWinsCount.Location = new System.Drawing.Point(224, 25);
+            this.myWinsCount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.myWinsCount.Name = "myWinsCount";
-            this.myWinsCount.Size = new System.Drawing.Size(16, 17);
+            this.myWinsCount.Size = new System.Drawing.Size(13, 13);
             this.myWinsCount.TabIndex = 7;
             this.myWinsCount.Text = "0";
             // 
             // myLossesLabel
             // 
-            this.myLossesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.myLossesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.myLossesLabel.AutoSize = true;
-            this.myLossesLabel.Location = new System.Drawing.Point(219, 76);
+            this.myLossesLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.myLossesLabel.Location = new System.Drawing.Point(164, 62);
+            this.myLossesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.myLossesLabel.Name = "myLossesLabel";
-            this.myLossesLabel.Size = new System.Drawing.Size(61, 17);
+            this.myLossesLabel.Size = new System.Drawing.Size(46, 13);
             this.myLossesLabel.TabIndex = 6;
             this.myLossesLabel.Text = "Losses: ";
             // 
             // myWinsLabel
             // 
-            this.myWinsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.myWinsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.myWinsLabel.AutoSize = true;
-            this.myWinsLabel.Location = new System.Drawing.Point(219, 31);
+            this.myWinsLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.myWinsLabel.Location = new System.Drawing.Point(164, 25);
+            this.myWinsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.myWinsLabel.Name = "myWinsLabel";
-            this.myWinsLabel.Size = new System.Drawing.Size(47, 17);
+            this.myWinsLabel.Size = new System.Drawing.Size(37, 13);
             this.myWinsLabel.TabIndex = 5;
             this.myWinsLabel.Text = "Wins: ";
             // 
             // changeFavCharButton
             // 
-            this.changeFavCharButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.changeFavCharButton.Location = new System.Drawing.Point(160, 167);
+            this.changeFavCharButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.changeFavCharButton.Location = new System.Drawing.Point(150, 117);
+            this.changeFavCharButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.changeFavCharButton.Name = "changeFavCharButton";
-            this.changeFavCharButton.Size = new System.Drawing.Size(216, 27);
+            this.changeFavCharButton.Size = new System.Drawing.Size(132, 41);
             this.changeFavCharButton.TabIndex = 4;
             this.changeFavCharButton.Text = "Change Fav Character";
             this.changeFavCharButton.UseVisualStyleBackColor = true;
@@ -180,30 +206,36 @@
             // playerNameLabel
             // 
             this.playerNameLabel.AutoSize = true;
-            this.playerNameLabel.Location = new System.Drawing.Point(56, 31);
+            this.playerNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.playerNameLabel.Location = new System.Drawing.Point(42, 25);
+            this.playerNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerNameLabel.Name = "playerNameLabel";
-            this.playerNameLabel.Size = new System.Drawing.Size(48, 17);
+            this.playerNameLabel.Size = new System.Drawing.Size(36, 13);
             this.playerNameLabel.TabIndex = 2;
             this.playerNameLabel.Text = "Player";
             // 
             // hiLabel
             // 
             this.hiLabel.AutoSize = true;
-            this.hiLabel.Location = new System.Drawing.Point(21, 31);
+            this.hiLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.hiLabel.Location = new System.Drawing.Point(16, 25);
+            this.hiLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hiLabel.Name = "hiLabel";
-            this.hiLabel.Size = new System.Drawing.Size(29, 17);
+            this.hiLabel.Size = new System.Drawing.Size(23, 13);
             this.hiLabel.TabIndex = 1;
             this.hiLabel.Text = "Hi, ";
             // 
             // playerName
             // 
-            this.playerName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.playerName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.playerName.AutoSize = true;
             this.playerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playerName.Location = new System.Drawing.Point(229, 167);
+            this.playerName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.playerName.Location = new System.Drawing.Point(172, 136);
+            this.playerName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerName.Name = "playerName";
-            this.playerName.Size = new System.Drawing.Size(67, 25);
+            this.playerName.Size = new System.Drawing.Size(52, 20);
             this.playerName.TabIndex = 10;
             this.playerName.Text = "Player";
             // 
@@ -211,45 +243,51 @@
             // 
             this.playerFriends.AllowUserToAddRows = false;
             this.playerFriends.AllowUserToDeleteRows = false;
-            this.playerFriends.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.playerFriends.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.playerFriends.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.playerFriends.Location = new System.Drawing.Point(24, 210);
+            this.playerFriends.Location = new System.Drawing.Point(18, 191);
+            this.playerFriends.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.playerFriends.Name = "playerFriends";
             this.playerFriends.RowTemplate.Height = 24;
-            this.playerFriends.Size = new System.Drawing.Size(348, 348);
+            this.playerFriends.Size = new System.Drawing.Size(261, 273);
             this.playerFriends.TabIndex = 13;
             // 
             // playerLossesCountLabel
             // 
-            this.playerLossesCountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.playerLossesCountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.playerLossesCountLabel.AutoSize = true;
-            this.playerLossesCountLabel.Location = new System.Drawing.Point(313, 76);
+            this.playerLossesCountLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.playerLossesCountLabel.Location = new System.Drawing.Point(235, 62);
+            this.playerLossesCountLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerLossesCountLabel.Name = "playerLossesCountLabel";
-            this.playerLossesCountLabel.Size = new System.Drawing.Size(16, 17);
+            this.playerLossesCountLabel.Size = new System.Drawing.Size(13, 13);
             this.playerLossesCountLabel.TabIndex = 12;
             this.playerLossesCountLabel.Text = "0";
             // 
             // playerWinsCountLabel
             // 
-            this.playerWinsCountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.playerWinsCountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.playerWinsCountLabel.AutoSize = true;
-            this.playerWinsCountLabel.Location = new System.Drawing.Point(310, 31);
+            this.playerWinsCountLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.playerWinsCountLabel.Location = new System.Drawing.Point(232, 25);
+            this.playerWinsCountLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerWinsCountLabel.Name = "playerWinsCountLabel";
-            this.playerWinsCountLabel.Size = new System.Drawing.Size(16, 17);
+            this.playerWinsCountLabel.Size = new System.Drawing.Size(13, 13);
             this.playerWinsCountLabel.TabIndex = 11;
             this.playerWinsCountLabel.Text = "0";
             // 
             // friendButton
             // 
-            this.friendButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.friendButton.Location = new System.Drawing.Point(234, 119);
+            this.friendButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.friendButton.Location = new System.Drawing.Point(176, 92);
+            this.friendButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.friendButton.Name = "friendButton";
-            this.friendButton.Size = new System.Drawing.Size(124, 23);
+            this.friendButton.Size = new System.Drawing.Size(93, 40);
             this.friendButton.TabIndex = 5;
             this.friendButton.Text = "Friend This Player";
             this.friendButton.UseVisualStyleBackColor = true;
@@ -257,20 +295,23 @@
             // 
             // playerLossesLabel
             // 
-            this.playerLossesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.playerLossesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.playerLossesLabel.AutoSize = true;
-            this.playerLossesLabel.Location = new System.Drawing.Point(231, 76);
+            this.playerLossesLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.playerLossesLabel.Location = new System.Drawing.Point(178, 62);
+            this.playerLossesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerLossesLabel.Name = "playerLossesLabel";
-            this.playerLossesLabel.Size = new System.Drawing.Size(61, 17);
+            this.playerLossesLabel.Size = new System.Drawing.Size(46, 13);
             this.playerLossesLabel.TabIndex = 10;
             this.playerLossesLabel.Text = "Losses: ";
             // 
             // goButton
             // 
-            this.goButton.Location = new System.Drawing.Point(130, 37);
+            this.goButton.Location = new System.Drawing.Point(120, 30);
+            this.goButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.goButton.Name = "goButton";
-            this.goButton.Size = new System.Drawing.Size(39, 22);
+            this.goButton.Size = new System.Drawing.Size(48, 20);
             this.goButton.TabIndex = 4;
             this.goButton.Text = "GO";
             this.goButton.UseVisualStyleBackColor = true;
@@ -278,57 +319,54 @@
             // 
             // playerWinsLabel
             // 
-            this.playerWinsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.playerWinsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.playerWinsLabel.AutoSize = true;
-            this.playerWinsLabel.Location = new System.Drawing.Point(231, 31);
+            this.playerWinsLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.playerWinsLabel.Location = new System.Drawing.Point(182, 25);
+            this.playerWinsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerWinsLabel.Name = "playerWinsLabel";
-            this.playerWinsLabel.Size = new System.Drawing.Size(47, 17);
+            this.playerWinsLabel.Size = new System.Drawing.Size(37, 13);
             this.playerWinsLabel.TabIndex = 9;
             this.playerWinsLabel.Text = "Wins: ";
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(24, 37);
+            this.usernameTextBox.Location = new System.Drawing.Point(18, 30);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(100, 22);
+            this.usernameTextBox.Size = new System.Drawing.Size(98, 20);
             this.usernameTextBox.TabIndex = 3;
             // 
             // searchUserLabel
             // 
             this.searchUserLabel.AutoSize = true;
-            this.searchUserLabel.Location = new System.Drawing.Point(21, 17);
+            this.searchUserLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.searchUserLabel.Location = new System.Drawing.Point(16, 14);
+            this.searchUserLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.searchUserLabel.Name = "searchUserLabel";
-            this.searchUserLabel.Size = new System.Drawing.Size(91, 17);
+            this.searchUserLabel.Size = new System.Drawing.Size(69, 13);
             this.searchUserLabel.TabIndex = 2;
             this.searchUserLabel.Text = "Search User:";
             // 
             // playerAvatar
             // 
-            this.playerAvatar.Location = new System.Drawing.Point(24, 74);
+            this.playerAvatar.Location = new System.Drawing.Point(18, 60);
+            this.playerAvatar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.playerAvatar.Name = "playerAvatar";
-            this.playerAvatar.Size = new System.Drawing.Size(120, 120);
+            this.playerAvatar.Size = new System.Drawing.Size(128, 128);
             this.playerAvatar.TabIndex = 1;
             this.playerAvatar.TabStop = false;
             // 
-            // charsBox
-            // 
-            this.charsBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.charsBox.FormattingEnabled = true;
-            this.charsBox.Location = new System.Drawing.Point(160, 137);
-            this.charsBox.Name = "charsBox";
-            this.charsBox.Size = new System.Drawing.Size(216, 24);
-            this.charsBox.TabIndex = 10;
-            // 
             // PlayerInfoPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Controls.Add(this.splitPanels);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PlayerInfoPage";
-            this.Size = new System.Drawing.Size(811, 592);
+            this.Size = new System.Drawing.Size(608, 481);
             this.splitPanels.Panel1.ResumeLayout(false);
             this.splitPanels.Panel1.PerformLayout();
             this.splitPanels.Panel2.ResumeLayout(false);

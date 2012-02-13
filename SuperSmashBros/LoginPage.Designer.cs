@@ -76,7 +76,6 @@
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(98, 20);
             this.usernameBox.TabIndex = 1;
-            this.usernameBox.Text = "Trevor";
             // 
             // passwordBox
             // 
@@ -88,7 +87,6 @@
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.Size = new System.Drawing.Size(98, 20);
             this.passwordBox.TabIndex = 2;
-            this.passwordBox.Text = "test123";
             this.passwordBox.UseSystemPasswordChar = true;
             // 
             // label3
@@ -120,10 +118,11 @@
             this.registerButton.UseVisualStyleBackColor = false;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
-            // SSBLoginPage
+            // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(614, 502);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.label3);
@@ -132,7 +131,7 @@
             this.Controls.Add(this.enterButton);
             this.Controls.Add(this.backgroundPicture);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "SSBLoginPage";
+            this.Name = "LoginPage";
             this.Text = "SuperSmashBrosDB - Login";
             ((System.ComponentModel.ISupportInitialize)(this.backgroundPicture)).EndInit();
             this.ResumeLayout(false);

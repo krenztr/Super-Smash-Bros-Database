@@ -69,12 +69,12 @@ namespace SuperSmashBros
                 command = new SqlCommand(cmd, connection);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Connection = connection;
-                
+
                 connection.Open();
                 sdr = command.ExecuteReader();
                 charsBox.Items.Clear();
                 charsBox.Items.Add("<Select a character>");
-                while (sdr.Read()) 
+                while (sdr.Read())
                 {
                     charsBox.Items.Add(sdr[0].ToString());
                 }
@@ -94,7 +94,7 @@ namespace SuperSmashBros
                     connection.Close();
                     connection.Dispose();
                 }
-            }       
+            }
         }
 
         void playerFriends_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -155,10 +155,10 @@ namespace SuperSmashBros
                         case "Olimar":
                             myAvatar.Image = global::SuperSmashBros.Properties.Resources.Olimar;
                             break;
-                        case"Samus":
+                        case "Samus":
                             myAvatar.Image = global::SuperSmashBros.Properties.Resources.Samus;
                             break;
-                        case"Bowser":
+                        case "Bowser":
                             myAvatar.Image = global::SuperSmashBros.Properties.Resources.Bowser;
                             break;
                         case "Captain Falcon":
@@ -181,7 +181,7 @@ namespace SuperSmashBros
                             break;
                     }
                 }
-    
+
                 sdr.Close();
                 cmd = "GetFriends";
                 command = new SqlCommand(cmd, connection);
@@ -375,7 +375,7 @@ namespace SuperSmashBros
                     {
                         updateProfile();
                         MessageBox.Show("Friend added successfully !");
-                    } 
+                    }
                     else
                         MessageBox.Show("Faile to add user " + player);
                 }
@@ -383,9 +383,9 @@ namespace SuperSmashBros
                 {
                     MessageBox.Show("Exception: " + ex.Message);
                 }
-                finally 
+                finally
                 {
-                    if (connection != null) 
+                    if (connection != null)
                     {
                         connection.Close();
                         connection.Dispose();
@@ -396,10 +396,13 @@ namespace SuperSmashBros
 
         private void changeFavCharButton_Click(object sender, EventArgs e)
         {
+            if (null == charsBox.SelectedItem)
+                return;
+
             string character = charsBox.SelectedItem.ToString();
             if (character.Equals("<Select a character>"))
                 return;
-            else 
+            else
             {
                 string connectionString = "user id=CSSE333-201212-SuperSmashBros;" +
                                        "Password=supersmashbros;" +
@@ -408,39 +411,38 @@ namespace SuperSmashBros
                                        "Database=SuperSmashBros;" +
                                        "connection timeout=30;" +
                                        "TrustServerCertificate=true";
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlCommand command = null;
-            string cmd = "SetFavoriteCharacter";
+                SqlConnection connection = new SqlConnection(connectionString);
+                SqlCommand command = null;
+                string cmd = "SetFavoriteCharacter";
 
-            try
-            {
-                command = new SqlCommand(cmd, connection);
-                command.CommandType = CommandType.StoredProcedure;
-                command.Connection = connection;
-                command.Parameters.Add(new SqlParameter("@Username", username));
-                command.Parameters.Add(new SqlParameter("@Password", password));
-                command.Parameters.Add(new SqlParameter("@Favorite", character));
-                
-                connection.Open();
-                int row = command.ExecuteNonQuery();
-                if (row > 0) 
+                try
                 {
-                    updateProfile();
-                    MessageBox.Show("Favorite character updated !");
-                } 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Exception: " + ex.Message);
-            }
-            finally
-            {
-                if (connection != null)
-                {
-                    connection.Close();
-                    connection.Dispose();
+                    command = new SqlCommand(cmd, connection);
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Connection = connection;
+                    command.Parameters.Add(new SqlParameter("@Username", username));
+                    command.Parameters.Add(new SqlParameter("@Password", password));
+                    command.Parameters.Add(new SqlParameter("@Favorite", character));
+
+                    connection.Open();
+                    int row = command.ExecuteNonQuery();
+
+                    if (row > 0)
+                        updateProfile();
+
                 }
-            }      
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception: " + ex.Message);
+                }
+                finally
+                {
+                    if (connection != null)
+                    {
+                        connection.Close();
+                        connection.Dispose();
+                    }
+                }
             }
         }
     }
