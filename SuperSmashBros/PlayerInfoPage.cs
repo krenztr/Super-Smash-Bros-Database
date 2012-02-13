@@ -363,7 +363,6 @@ namespace SuperSmashBros
                     command = new SqlCommand(cmd, connection);
                     command.CommandType = CommandType.StoredProcedure;
                     command.Connection = connection;
-                    MessageBox.Show(username + " " + password + " " + player);
                     command.Parameters.Add(new SqlParameter("@Username", this.username));
                     command.Parameters.Add(new SqlParameter("@Password", this.password));
                     command.Parameters.Add(new SqlParameter("@Friend", this.player));
