@@ -129,8 +129,29 @@
     <None Include="Resources\enter-button.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Lylat Cruise.jpg" />
+    <None Include="Resources\Mushroomy Kingdom.jpg" />
+    <None Include="Resources\Mario Circut.jpg" />
+    <None Include="Resources\Luigis Mansion.jpg" />
+    <None Include="Resources\Pirate Ship.jpg" />
+    <None Include="Resources\Pikachu.jpg" />
+    <None Include="Resources\Marth.jpg" />
+    <None Include="Resources\Bowser.jpg" />
+    <None Include="Resources\Captain Falcon.jpg" />
+    <None Include="Resources\Battlefield.jpg" />
+    <None Include="Resources\Castle Siege.jpg" />
     <Content Include="Resources\challenger-approaching.jpg" />
+    <None Include="Resources\Samus.jpg" />
+    <None Include="Resources\Olimar.jpg" />
+    <None Include="Resources\Fox.jpg" />
+    <None Include="Resources\Jigglypuff.jpg" />
+    <None Include="Resources\Kirby.jpg" />
+    <None Include="Resources\Final Destination.jpg" />
+    <None Include="Resources\Hyrule Temple.jpg" />
+    <None Include="Resources\Fountain of Dreams.jpg" />
     <Content Include="Resources\link.jpg" />
+    <None Include="Resources\Luigi.jpg" />
+    <None Include="Resources\Mario.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

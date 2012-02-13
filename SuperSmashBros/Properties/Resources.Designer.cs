@@ -60,9 +60,37 @@ namespace SuperSmashBros.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Battlefield {
+            get {
+                object obj = ResourceManager.GetObject("Battlefield", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Bowser {
+            get {
+                object obj = ResourceManager.GetObject("Bowser", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap brawl_1024 {
             get {
                 object obj = ResourceManager.GetObject("brawl_1024", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Captain_Falcon {
+            get {
+                object obj = ResourceManager.GetObject("Captain Falcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Castle_Siege {
+            get {
+                object obj = ResourceManager.GetObject("Castle Siege", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -81,9 +109,135 @@ namespace SuperSmashBros.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Final_Destination {
+            get {
+                object obj = ResourceManager.GetObject("Final Destination", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Fountain_of_Dreams {
+            get {
+                object obj = ResourceManager.GetObject("Fountain of Dreams", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Fox {
+            get {
+                object obj = ResourceManager.GetObject("Fox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Hyrule_Temple {
+            get {
+                object obj = ResourceManager.GetObject("Hyrule Temple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Jigglypuff {
+            get {
+                object obj = ResourceManager.GetObject("Jigglypuff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Kirby {
+            get {
+                object obj = ResourceManager.GetObject("Kirby", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap link {
             get {
                 object obj = ResourceManager.GetObject("link", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Luigi {
+            get {
+                object obj = ResourceManager.GetObject("Luigi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Luigis_Mansion {
+            get {
+                object obj = ResourceManager.GetObject("Luigis Mansion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Lylat_Cruise {
+            get {
+                object obj = ResourceManager.GetObject("Lylat Cruise", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Mario {
+            get {
+                object obj = ResourceManager.GetObject("Mario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Mario_Circut {
+            get {
+                object obj = ResourceManager.GetObject("Mario Circut", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Marth {
+            get {
+                object obj = ResourceManager.GetObject("Marth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Mushroomy_Kingdom {
+            get {
+                object obj = ResourceManager.GetObject("Mushroomy Kingdom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Olimar {
+            get {
+                object obj = ResourceManager.GetObject("Olimar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Pikachu {
+            get {
+                object obj = ResourceManager.GetObject("Pikachu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Pirate_Ship {
+            get {
+                object obj = ResourceManager.GetObject("Pirate Ship", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Samus {
+            get {
+                object obj = ResourceManager.GetObject("Samus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Samus1 {
+            get {
+                object obj = ResourceManager.GetObject("Samus1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

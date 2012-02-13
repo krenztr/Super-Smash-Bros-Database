@@ -118,16 +118,82 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Kirby" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kirby.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fountain of Dreams" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fountain of Dreams.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="brawl_1024" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\brawl_1024.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="challenger-approaching" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\challenger-approaching.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Olimar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Olimar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mario.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pirate Ship" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pirate Ship.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Final Destination" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Final Destination.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mario Circut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mario Circut.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mushroomy Kingdom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mushroomy Kingdom.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fox.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Marth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Marth.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hyrule Temple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hyrule Temple.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Samus1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Samus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bowser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bowser.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="enter-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\enter-button.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Battlefield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battlefield.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Castle Siege" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Castle Siege.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Luigis Mansion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Luigis Mansion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Luigi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Luigi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Samus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Samus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pikachu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pikachu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jigglypuff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jigglypuff.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="link" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\link.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Captain Falcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captain Falcon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="challenger-approaching" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\challenger-approaching.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lylat Cruise" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lylat Cruise.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
