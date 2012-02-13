@@ -415,9 +415,9 @@ namespace SuperSmashBros
                 command = new SqlCommand(cmd, connection);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Connection = connection;
-                command.Parameters.Add("@Username", username);
-                command.Parameters.Add("@Password", password);
-                command.Parameters.Add("@Favorite", character);
+                command.Parameters.Add(new SqlParameter("@Username", username));
+                command.Parameters.Add(new SqlParameter("@Password", password));
+                command.Parameters.Add(new SqlParameter("@Favorite", character));
                 
                 connection.Open();
                 int row = command.ExecuteNonQuery();
