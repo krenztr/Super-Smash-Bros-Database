@@ -32,6 +32,8 @@ namespace SuperSmashBros
             this.SizeChanged += new EventHandler(PlayerInfoPage_SizeChanged);
             this.myFriends.CellMouseClick += new DataGridViewCellMouseEventHandler(myFriends_CellMouseClick);
             this.playerFriends.CellMouseClick += new DataGridViewCellMouseEventHandler(playerFriends_CellMouseClick);
+ 
+            this.charsBox.DropDown += new EventHandler(charsBox_DropDown);
 
             this.playerNameLabel.Text = this.username;
             playerName.Hide();
@@ -45,6 +47,11 @@ namespace SuperSmashBros
             this.splitPanels.Panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.splitPanels.Panel2.Anchor = (AnchorStyles.Left | AnchorStyles.Right
                 | AnchorStyles.Top | AnchorStyles.Bottom);
+        }
+
+        void charsBox_DropDown(object sender, EventArgs e)
+        {
+               
         }
 
         void playerFriends_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -93,12 +100,45 @@ namespace SuperSmashBros
                             myAvatar.Image = global::SuperSmashBros.Properties.Resources.link;
                             myAvatar.Show();
                             break;
+                        case "Mario":
+                            myAvatar.Image = global::SuperSmashBros.Properties.Resources.Mario;
+                            break;
+                        case "Luigi":
+                            myAvatar.Image = global::SuperSmashBros.Properties.Resources.Luigi;
+                            break;
+                        case "Fox":
+                            myAvatar.Image = global::SuperSmashBros.Properties.Resources.Fox;
+                            break;
+                        case "Olimar":
+                            myAvatar.Image = global::SuperSmashBros.Properties.Resources.Olimar;
+                            break;
+                        case"Samus":
+                            myAvatar.Image = global::SuperSmashBros.Properties.Resources.Samus;
+                            break;
+                        case"Bowser":
+                            myAvatar.Image = global::SuperSmashBros.Properties.Resources.Bowser;
+                            break;
+                        case "Captain Falcon":
+                            myAvatar.Image = global::SuperSmashBros.Properties.Resources.Captain_Falcon;
+                            break;
+                        case "Marth":
+                            myAvatar.Image = global::SuperSmashBros.Properties.Resources.Marth;
+                            break;
+                        case "Pikachu":
+                            myAvatar.Image = global::SuperSmashBros.Properties.Resources.Pikachu;
+                            break;
+                        case "Jigglypuff":
+                            myAvatar.Image = global::SuperSmashBros.Properties.Resources.Jigglypuff;
+                            break;
+                        case "Kirby":
+                            myAvatar.Image = global::SuperSmashBros.Properties.Resources.Kirby;
+                            break;
                         default:
                             myAvatar.Image = null;
                             break;
                     }
                 }
-
+    
                 sdr.Close();
                 cmd = "GetFriends";
                 command = new SqlCommand(cmd, connection);
@@ -149,6 +189,8 @@ namespace SuperSmashBros
         {
             if (this.usernameTextBox.Text.Equals(""))
                 MessageBox.Show("Enter the name of the player you want to search !");
+            else if (!MainPage.IsLetterOrDigit(usernameTextBox.Text))
+                MessageBox.Show("Please don't try to break our database.");
             else
             {
                 string connectionString = "user id=CSSE333-201212-SuperSmashBros;" +
@@ -185,7 +227,39 @@ namespace SuperSmashBros
                         {
                             case "Link":
                                 playerAvatar.Image = global::SuperSmashBros.Properties.Resources.link;
-                                playerAvatar.Show();
+                                break;
+                            case "Mario":
+                                playerAvatar.Image = global::SuperSmashBros.Properties.Resources.Mario;
+                                break;
+                            case "Luigi":
+                                playerAvatar.Image = global::SuperSmashBros.Properties.Resources.Luigi;
+                                break;
+                            case "Fox":
+                                playerAvatar.Image = global::SuperSmashBros.Properties.Resources.Fox;
+                                break;
+                            case "Olimar":
+                                playerAvatar.Image = global::SuperSmashBros.Properties.Resources.Olimar;
+                                break;
+                            case "Samus":
+                                playerAvatar.Image = global::SuperSmashBros.Properties.Resources.Samus;
+                                break;
+                            case "Bowser":
+                                playerAvatar.Image = global::SuperSmashBros.Properties.Resources.Bowser;
+                                break;
+                            case "Captain Falcon":
+                                playerAvatar.Image = global::SuperSmashBros.Properties.Resources.Captain_Falcon;
+                                break;
+                            case "Marth":
+                                playerAvatar.Image = global::SuperSmashBros.Properties.Resources.Marth;
+                                break;
+                            case "Pikachu":
+                                playerAvatar.Image = global::SuperSmashBros.Properties.Resources.Pikachu;
+                                break;
+                            case "Jigglypuff":
+                                playerAvatar.Image = global::SuperSmashBros.Properties.Resources.Jigglypuff;
+                                break;
+                            case "Kirby":
+                                playerAvatar.Image = global::SuperSmashBros.Properties.Resources.Kirby;
                                 break;
                             default:
                                 playerAvatar.Image = null;
@@ -201,7 +275,7 @@ namespace SuperSmashBros
                     command.Parameters.Add(new SqlParameter("@Username", this.usernameTextBox.Text));
                     sdr = command.ExecuteReader();
                     int count = 0;
-                    if (playerFriends.Columns.Count<1)
+                    if (playerFriends.Columns.Count < 1)
                         playerFriends.Columns.Add("friendCol", "Friends");
                     playerFriends.Columns["friendCol"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                     playerFriends.Rows.Clear();
@@ -274,6 +348,11 @@ namespace SuperSmashBros
                     }
                 }
             }
+        }
+
+        private void changeFavCharButton_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

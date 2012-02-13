@@ -49,6 +49,7 @@
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.searchUserLabel = new System.Windows.Forms.Label();
             this.playerAvatar = new System.Windows.Forms.PictureBox();
+            this.charsBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitPanels)).BeginInit();
             this.splitPanels.Panel1.SuspendLayout();
             this.splitPanels.Panel2.SuspendLayout();
@@ -70,6 +71,7 @@
             // 
             // splitPanels.Panel1
             // 
+            this.splitPanels.Panel1.Controls.Add(this.charsBox);
             this.splitPanels.Panel1.Controls.Add(this.myFriends);
             this.splitPanels.Panel1.Controls.Add(this.myAvatar);
             this.splitPanels.Panel1.Controls.Add(this.myLossesCount);
@@ -124,7 +126,7 @@
             this.myLossesCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.myLossesCount.AutoSize = true;
-            this.myLossesCount.Location = new System.Drawing.Point(301, 127);
+            this.myLossesCount.Location = new System.Drawing.Point(301, 76);
             this.myLossesCount.Name = "myLossesCount";
             this.myLossesCount.Size = new System.Drawing.Size(16, 17);
             this.myLossesCount.TabIndex = 8;
@@ -135,7 +137,7 @@
             this.myWinsCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.myWinsCount.AutoSize = true;
-            this.myWinsCount.Location = new System.Drawing.Point(298, 82);
+            this.myWinsCount.Location = new System.Drawing.Point(298, 31);
             this.myWinsCount.Name = "myWinsCount";
             this.myWinsCount.Size = new System.Drawing.Size(16, 17);
             this.myWinsCount.TabIndex = 7;
@@ -146,7 +148,7 @@
             this.myLossesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.myLossesLabel.AutoSize = true;
-            this.myLossesLabel.Location = new System.Drawing.Point(219, 127);
+            this.myLossesLabel.Location = new System.Drawing.Point(219, 76);
             this.myLossesLabel.Name = "myLossesLabel";
             this.myLossesLabel.Size = new System.Drawing.Size(61, 17);
             this.myLossesLabel.TabIndex = 6;
@@ -157,7 +159,7 @@
             this.myWinsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.myWinsLabel.AutoSize = true;
-            this.myWinsLabel.Location = new System.Drawing.Point(219, 82);
+            this.myWinsLabel.Location = new System.Drawing.Point(219, 31);
             this.myWinsLabel.Name = "myWinsLabel";
             this.myWinsLabel.Size = new System.Drawing.Size(47, 17);
             this.myWinsLabel.TabIndex = 5;
@@ -173,6 +175,7 @@
             this.changeFavCharButton.TabIndex = 4;
             this.changeFavCharButton.Text = "Change Fav Character";
             this.changeFavCharButton.UseVisualStyleBackColor = true;
+            this.changeFavCharButton.Click += new System.EventHandler(this.changeFavCharButton_Click);
             // 
             // playerNameLabel
             // 
@@ -223,7 +226,7 @@
             this.playerLossesCountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.playerLossesCountLabel.AutoSize = true;
-            this.playerLossesCountLabel.Location = new System.Drawing.Point(312, 127);
+            this.playerLossesCountLabel.Location = new System.Drawing.Point(313, 76);
             this.playerLossesCountLabel.Name = "playerLossesCountLabel";
             this.playerLossesCountLabel.Size = new System.Drawing.Size(16, 17);
             this.playerLossesCountLabel.TabIndex = 12;
@@ -234,7 +237,7 @@
             this.playerWinsCountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.playerWinsCountLabel.AutoSize = true;
-            this.playerWinsCountLabel.Location = new System.Drawing.Point(309, 82);
+            this.playerWinsCountLabel.Location = new System.Drawing.Point(310, 31);
             this.playerWinsCountLabel.Name = "playerWinsCountLabel";
             this.playerWinsCountLabel.Size = new System.Drawing.Size(16, 17);
             this.playerWinsCountLabel.TabIndex = 11;
@@ -244,7 +247,7 @@
             // 
             this.friendButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.friendButton.Location = new System.Drawing.Point(233, 36);
+            this.friendButton.Location = new System.Drawing.Point(234, 119);
             this.friendButton.Name = "friendButton";
             this.friendButton.Size = new System.Drawing.Size(124, 23);
             this.friendButton.TabIndex = 5;
@@ -257,7 +260,7 @@
             this.playerLossesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.playerLossesLabel.AutoSize = true;
-            this.playerLossesLabel.Location = new System.Drawing.Point(230, 127);
+            this.playerLossesLabel.Location = new System.Drawing.Point(231, 76);
             this.playerLossesLabel.Name = "playerLossesLabel";
             this.playerLossesLabel.Size = new System.Drawing.Size(61, 17);
             this.playerLossesLabel.TabIndex = 10;
@@ -278,7 +281,7 @@
             this.playerWinsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.playerWinsLabel.AutoSize = true;
-            this.playerWinsLabel.Location = new System.Drawing.Point(230, 82);
+            this.playerWinsLabel.Location = new System.Drawing.Point(231, 31);
             this.playerWinsLabel.Name = "playerWinsLabel";
             this.playerWinsLabel.Size = new System.Drawing.Size(47, 17);
             this.playerWinsLabel.TabIndex = 9;
@@ -307,6 +310,16 @@
             this.playerAvatar.Size = new System.Drawing.Size(120, 120);
             this.playerAvatar.TabIndex = 1;
             this.playerAvatar.TabStop = false;
+            // 
+            // charsBox
+            // 
+            this.charsBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.charsBox.FormattingEnabled = true;
+            this.charsBox.Location = new System.Drawing.Point(160, 137);
+            this.charsBox.Name = "charsBox";
+            this.charsBox.Size = new System.Drawing.Size(216, 24);
+            this.charsBox.TabIndex = 10;
             // 
             // PlayerInfoPage
             // 
@@ -353,5 +366,6 @@
         private System.Windows.Forms.DataGridView myFriends;
         private System.Windows.Forms.DataGridView playerFriends;
         private System.Windows.Forms.Label playerName;
+        private System.Windows.Forms.ComboBox charsBox;
     }
 }
