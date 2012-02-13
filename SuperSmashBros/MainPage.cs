@@ -58,6 +58,16 @@ namespace SuperSmashBros
             this.FormClosing += new FormClosingEventHandler(MainPage_FormClosing);
         }
 
+        public static bool IsLetterOrDigit(string s)
+        {
+            foreach (char c in s.ToCharArray())
+            {
+                if (!Char.IsLetterOrDigit(c))
+                    return false;
+            }
+            return true;
+        }
+
         void MainPage_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.loginPage.Close();

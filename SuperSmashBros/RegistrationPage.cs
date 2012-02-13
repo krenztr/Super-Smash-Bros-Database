@@ -59,6 +59,12 @@ namespace SuperSmashBros
                 MessageBox.Show("What good is a lockless door?");
                 return;
             }
+            string temp = username + password;
+            if (!MainPage.IsLetterOrDigit(temp))
+            {
+                MessageBox.Show("Please don't try to break our database.");
+                return;
+            }
 
             string connectionString = "user id=CSSE333-201212-SuperSmashBros;" +
                                        "Password=supersmashbros;" +
