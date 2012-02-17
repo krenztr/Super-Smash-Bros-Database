@@ -85,7 +85,8 @@ There exists a single trigger in the database which ensures that there exist no 
 \subsection{Entity Relationship Diagram}
 \includegraphics[keepaspectratio, width=6in]{ER.png}\\
 \subsection{Explanation of Entity Relationship Diagram}
-foo
+Each player has a password, an integer for wins, an integer for losses, and a favorite character. Each player can also friend a player, but this relation is directional. Characters can be used to participate in a match, and each character has a name, the game that they came from, and the tier that they belong to. Tiers have a name and a level, which is an integer saying how much better the tier is compared to other tiers (a lower number is better). Matches are kept track of by the database, which have a type, date, time, and participants, which are represented by the Player\_matches table, which keep track of what player participated in what match, what character that they have chosen, and what the result for that player was. Each match takes place on a stage, and each stage has a name, size, and a game that it was inspired from.
+\clearpage
 
 \section{Index and Glossary}
 \textbf{C\#}: (pronounced 'see pound') multi-paradigm programming language that was developed by Microsoft. (\pageref{csharp}).\\ \\
