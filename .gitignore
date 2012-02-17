@@ -1,5 +1,9 @@
 \SuperSmashBros\[Oo]bj
 \SuperSmashBros\[Bb]in
+\[Dd]oc\*.aux
+\[Dd]oc\*.log
+\[Dd]oc\*.out
+\[Dd]oc\*.toc
 *.user
 *.suo
 *.[Cc]ache
